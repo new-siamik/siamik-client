@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# **Client Siamik**
+Client Siamik adalah repository untuk memanagament kode bagian frontend dalam pembuatan New Siamik UPN "Veteran" Jawwa Timur.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+# **Overview**
+- README.md so feel free to read it when you want to run projects one by one
+- Project use conventional commits to prevent commit confusion
+
+<br>
+
+# **Conventional commits**
+`feat` : new features<br>
+`fix` : fix something, e.g bugs<br>
+`ref` : refactor code<br>
+`docs` : documentation<br>
+`chore` : change to the build process, e.g add depedencies<br>
+`style` : not affect to the code, e.g formatting, missing semi-colons, white space, etc<br>
+`test` : add test or correcting existing tests<br>
+
+<br>
+
+Example : 
+```bash
+git commit -m "feat: add register"
+git commit -m "fix: nullable name at register page"
+git commit -m "ref: make the code short and simple at register handler"
+git commit -m "docs: add the documentation at register page"
+git commit -m "style: add some white space at register handler to handle the confusion"
+git commit -m "test: add test for register handler"
+```
+
+<br>
+
+# ***Getting Started with Create React App***
 
 In the project directory, you can run:
+### `yarn install`
+For the first time, Ketik perintah tersebut di terminal favorit kalian dan lakukan didalam folder client-siamik.
 
 ### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs that script in the client-siamik folder.
+And then open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes.
 
 ### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Builds the app for production to the `build` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.Your app is ready to be deployed!
