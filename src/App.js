@@ -1,5 +1,84 @@
+import React, { useReducer, createContext } from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import ScrollPage from "./components/ScrollPage";
+
+/* Admin */
+/* import AdminSignin from "./pages/admin/auth/AdminSignin"
+import AdminDash from "./pages/admin/dashboard/AdminDash"
+import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
+ */
+// import Signin from "./pages/auth/Signin";
+// import Signup from "./pages/auth/Signup";
+
+/* Student */
+/* import Mydash from "./pages/dashboard/Mydash";
+import Profile from "./pages/dashboard/Profile";
+ */
+import NotFound from "./pages/NotFound";
+
+export const AuthContext = createContext();
+
+const initialState = {
+  isAuthenticated: false,
+  id: null,
+  email: null,
+  token: null,
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "LOGIN":
+      localStorage.setItem("id", action.payload.id);
+      localStorage.setItem("email", action.payload.email);
+      localStorage.setItem("token", action.payload.token);
+      return {
+        ...state,
+        isAuthenticated: true,
+        id: action.payload.id,
+        email: action.payload.email,
+        token: action.payload.token,
+      };
+    case "LOGOUT":
+      localStorage.clear();
+      return {
+        ...state,
+        isAuthenticated: false,
+        email: null,
+        id: null,
+        token: null,
+        role: null,
+      }
+    default:
+      return state;
+  }
+};
+
 export default function App() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
-    <h1>Halo Gais</h1>
+    <AuthContext.Provider value={{ state, dispatch }}>
+      <ScrollPage>
+        <Routes>
+          {/* <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} /> */}
+          
+          {/* Student */}
+          {/* <Route path="/dashboard/my" element={<Mydash />} />
+          <Route path="/dashboard/profile" element={<Profile />} />
+          <Route path="/question/:id" element={<Forum />} /> */}
+
+          {/* Admin */}
+          {/* <Route path="/admin/signin" element={<AdminSignin />} />
+          <Route path="/admin/dashboard" element={<AdminDash />} />
+          <Route path="/admin/mentor/create" element={<AdminCreateMentor />} /> */}
+
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ScrollPage>
+    </AuthContext.Provider>
   );
 }
