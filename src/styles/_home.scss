@@ -1,0 +1,29 @@
+@import "../styles/base/_variable.scss";
+
+.home-component {
+    #container_home {
+        #welcome_msg {
+            @include flex-center;
+            flex-direction: column;
+            > .text-msg {
+                h1 {
+                    @include text-head($neutral-4, 2.25rem, 800);
+                }
+                > h3 {
+                    @include text-head($neutral-3, 1rem, 500);
+                }
+            }
+            > .other-info {
+                .box-other-info {
+                    > button {
+                        width: 240px;
+                        height: 80px;
+                        font-size: 14px;
+                        border-radius: 10px;
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}

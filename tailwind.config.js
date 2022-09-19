@@ -4,7 +4,21 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'green-base': '#2C4C37',
+        'second-color': '#6B8173',
+        'error-color': '#B8351C'
+      },
+      screen: {
+        '6xs': {'max': '240px'},
+        '5xs': {'max': '320px'},
+        '4xs': {'max': '375px'},
+        '3xs': {'max': '411px'},
+        '2xs': {'max': '480px'},
+        'xs': {'max': '540px'},
+      }
+    }
   },
   plugins: [],
 }

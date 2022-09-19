@@ -8,12 +8,11 @@ header {
       width: 100%;
       display: flex;
       height: 5.5rem;
-      padding: 0 2.5rem;
+      padding: 0 4rem;
       align-items: center;
-      background-color: #fff;
-      position: -webkit-sticky;
+      background-color: $green-base;
       justify-content: space-between;
-      border-bottom: 1px solid #e6e6e6;
+      // border-bottom: 1px solid #e6e6e6;
       @include transition(box-shadow, .3s);
       @media only screen and (max-width: 919px) {
         justify-content: start;
@@ -22,10 +21,19 @@ header {
         padding: 0 1.5rem;
       }
       #nav_brand {
-        h1 {
-          font-weight: 700;
-          color: $blue-code;
-          font-size: 1.75rem;
+        > a {
+          @include flex-center;
+          h1 {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-left: 1rem;
+            color: $neutral-4;
+            @include transition(all, .2s);
+          }
+
+          &:hover > h1 {
+            color: $second-color;
+          }
         }
         @media only screen and (max-width: 919px) {
           margin-right: auto;
@@ -130,11 +138,16 @@ header {
             }
           }
           > li {
+            color: white;
             font-size: 1rem;
             font-weight: 500;
             text-align: center;
             margin-right: 2.5rem;
             @media only screen and (max-width: 919px) {
+              margin-right: 0;
+            }
+
+            &:last-child {
               margin-right: 0;
             }
             > a {
@@ -144,8 +157,8 @@ header {
                 text-decoration: underline;
                 text-decoration-style: solid;
                 -moz-text-decoration-style: solid;
-                text-decoration-color: $blue-code;
-                -moz-text-decoration-color: $blue-code;
+                text-decoration-color: $second-color;
+                -moz-text-decoration-color: $second-color;
                 &:hover {
                   text-decoration-color: $orange-code;
                   -moz-text-decoration-color: $orange-code;
@@ -157,7 +170,7 @@ header {
               }
             }
             &:hover {
-              color: $blue-code;
+              color: $second-color;
             }
           }
           .noauth-links {

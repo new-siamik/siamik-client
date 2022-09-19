@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 // import Image from "./Image";
 import "../styles/component/_navbar.scss";
 import { classes } from "../utils/Classes";
-import NoAuthBtn from "./button/auth/NoAuthBtn";
+import BtnCustom from "../components/button/BtnCustom"
 
 export default function Navbar() {
 
@@ -24,11 +24,12 @@ export default function Navbar() {
         <header>
             <nav id="navbar_component">   
                 <div id="nav_brand">
-                    <h1 className="poppins">
-                        <NavLink to="/">
-                            <img src="/asset/img/logo-codeswer.png" width={180} alt="logo" />
-                        </NavLink>        
-                    </h1>
+                    <NavLink to="/">
+                        <img src="/assets/image/upn-logo.svg" width={50} alt="logo" />
+                        <h1 className="inter font-bold">
+                            UPN "Veteran" Jawa Timur
+                        </h1>
+                    </NavLink>        
                 </div>
 
                 <div id="nav_icon" onClick={open}  className={
@@ -41,31 +42,51 @@ export default function Navbar() {
                 </div>
 
                 <div id="nav_links">
-                    <ul id="nav_links_item" className="poppins">
+                    <ul id="nav_links_item" className="inter">
                         <li>
                             <NavLink
                                 className={({ isActive }) =>
                                     isActive ? 'nav-active' : ''
-                                } to="/">
-                                Home
+                                } to="/pengumuman">
+                                Pengumuman
                             </NavLink>
                         </li>
                         <li>
                             <NavLink 
                                 className={({ isActive }) =>
                                         isActive ? 'nav-active' : ''
-                                } to="/docs">
-                                How It Works
+                                } to="/layanan">
+                                Layanan Lainnya
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/blogs"
+                            <NavLink to="/panduan"
                                 className={({ isActive }) =>
                                     isActive ? 'nav-active' : ''
                                 }>
-                                Blog
+                                Manual/Panduan
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/alur"
+                                className={({ isActive }) =>
+                                    isActive ? 'nav-active' : ''
+                                }>
+                                Alur
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/signin"
+                                className={({ isActive }) =>
+                                    isActive ? 'nav-active' : ''
+                                }
+                            >
+                                <BtnCustom classname="bg-white text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]">
+                                    Login
+                                </BtnCustom>
+                            </NavLink>
+                        </li>
+
                         {/* {
                             loading ?
                             <Dots className="max-w-[10rem]" text=" " dotColors={['#3A39B4', '#656EE3']}/>
@@ -84,35 +105,9 @@ export default function Navbar() {
                                 </AuthBtn>
                                 :
                         } */}
-                                <NoAuthBtn classname={"noauth-links"}/>
                     </ul>
                 </div>
 
-                <div id="nav_autentikasi">
-                    {/* {
-                        localStorage.id ?
-                            <>
-                                {
-                                    loading ?
-                                    <Dots className="max-w-[5rem]" text=" " dotColors={['#4B5563']}/>
-                                    :
-                                    <AuthBtn classname={classes(isPopup ? "ring-offset-2 ring ring-indigo-code" : "", "rounded-[5px] auth-nav" )} onClick={openPopup}>
-                                        {
-                                            user.map((e, i) => {
-                                                return (
-                                                    <span key={i}>
-                                                        <Image classname="w-[2.5rem] mr-1" path={`/asset/img/user/${e.photo}`}/>
-                                                    </span>
-                                                )
-                                            })
-                                        }
-                                    </AuthBtn>  
-                                }
-                            </>
-                            :
-                    } */}
-                            <NoAuthBtn classname={"noauth-nav"}/>
-                </div>
             </nav>
         </header>
     )
