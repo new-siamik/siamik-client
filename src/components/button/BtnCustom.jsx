@@ -1,7 +1,7 @@
 import React from "react"
 import "../../styles/component/button/_btnCustom.scss";
 
-export default function BtnCustom({classname, type, children}) {
+export default function BtnCustom({classname, type, ripple, children}) {
 
     const [coords, setCoords] = React.useState({ x: -1, y: -1 });
     const [isRippling, setIsRippling] = React.useState(false);
@@ -26,7 +26,7 @@ export default function BtnCustom({classname, type, children}) {
         >
             {isRippling ? (
                 <span
-                    className="ripple"
+                    className={`ripple`}
                     style={{
                         left: coords.x,
                         top: coords.y

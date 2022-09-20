@@ -17,9 +17,9 @@
   position: relative;
   .ripple {
     opacity: 1;
+    content: "";
     width: 100%;
     height: 100%;
-    content: "";
     display: block;
     position: absolute;
     background: #d8d8d87c;

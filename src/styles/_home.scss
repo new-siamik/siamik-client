@@ -25,5 +25,75 @@
                 }
             }
         }
+        .box-content {
+            .title-article {
+                font-weight: 700;
+                text-align: center;
+            }
+            &#pengumuman {
+                .box-pengumuman {
+                    > #date_pengumuman {
+                        @include flex-center;
+                        @include text-head($neutral-2, 1rem, 400);
+                        > img {
+                            margin-right: 0.75rem;
+                        }
+                    }
+                    > #content_pengumuman {
+                        margin-top: 1rem;
+                        > h3 {
+                            @include text-head($gray-900, 1rem, 600);
+                        }
+                        > p {
+                            margin-top: 0.5rem;
+                        }
+                    }
+                    > .btn-pengumuman {
+                        @include transition(background-color, 0.2s)
+                    }
+                    > .btn-more-pengumuman {
+                        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 6px;
+                    }
+                }
+            }
+            &#other_service {
+                .container {
+                    @include text-head($green-base, 1rem, 500);
+                    > .box-other-service  {
+                        padding: 1.25rem;
+                        @include flex-center;
+                        > button {
+                            width: 100%;
+                            font-size: 16px;
+                            text-align: left;
+                            border-radius: 5px;
+                            padding: 0.25rem 0.5rem;
+                        }
+                    }
+                } 
+            }
+            &#manual_panduan {
+                .container {
+                    #manual-list {
+                        .item-list {
+                            h3 {
+                                @include text-head($gray-900, 20px, 600)
+                            }
+                        }
+                    }
+                }
+            }
+            &#alur {
+                .container {
+                    #alur-list {
+                        .item-list {
+                            h3 {
+                                @include text-head($gray-900, 20px, 600)
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
