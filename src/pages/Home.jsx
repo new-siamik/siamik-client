@@ -58,6 +58,7 @@ export default function Home() {
                                         snap   : true,
                                         drag   : 'free',
                                         type   : 'loop',
+                                        height: '7rem'
                                     }
                                 }>
                                     <SplideSlide>
