@@ -2,4 +2,10 @@
 
 #button_scroll_top {
     @include transition(all, 0.3s);
+    &::active {
+        padding: 0.25rem;
+        color: $neutral-4;
+        border-radius: 9999px;
+        background-color: rgb(202 138 4 / 1);
+    }
 }

@@ -124,9 +124,11 @@ export default function Home() {
                                         <BtnCustom classname="md:block hidden border-2 border-green-base rounded-[5px] text-left py-1 px-2 invisible">
                                             <NavLink to="/wisuda">Wisuda</NavLink>
                                         </BtnCustom>
-                                        <BtnCustom classname="border-2 transition-colors duration-200 hover:bg-green-base/80 sm:hover:text-neutral-100 hover:shadow-md sm:hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 border-green-base rounded-[5px] text-left py-1 px-2">
-                                            <a href="https://siamik.upnjatim.ac.id/html/siamik/ukt.asp" target="__blank" rel="noopener noreferrer">UKT</a>
-                                        </BtnCustom>
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/ukt.asp" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 transition-colors duration-200 hover:bg-green-base/80 sm:hover:text-neutral-100 hover:shadow-md sm:hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 border-green-base rounded-[5px] text-left py-1 px-2 w-full">
+                                                UKT
+                                            </BtnCustom>
+                                        </a>
                                         <BtnCustom classname="md:block hidden border-2 border-green-base rounded-[5px] text-left py-1 px-2 invisible">
                                             <NavLink to="/tracking-ijazah">Tracking Ijazah</NavLink>
                                         </BtnCustom>
@@ -136,69 +138,100 @@ export default function Home() {
                                     <div id="icon_service">
                                         <img src="/assets/image/calendar-academic.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/umum/KALENDER_AKADEMIK-UPNVJT_2022_2023.pdf" download>TA. 2022/2023</a>
-                                    </BtnCustom>
+                                    <div className="w-full">
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/umum/KALENDER_AKADEMIK-UPNVJT_2022_2023.pdf" download>
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                TA. 2022/2023
+                                            </BtnCustom>
+                                        </a>
+                                    </div>
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/kampus-merdeka-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/mbkm.asp" target="__blank" rel="noopener noreferrer">MBKM</a>
-                                    </BtnCustom>
+                                    <div className="w-full">
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/mbkm.asp" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                MBKM
+                                            </BtnCustom>
+                                        </a>
+                                    </div>
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/daftar-peserta-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/daftarPesertaKuliah.asp" target="__blank" rel="noopener noreferrer">Daftar Peserta Kuliah</a>
-                                    </BtnCustom>
+                                    <div className="w-full">
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/daftarPesertaKuliah.asp" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                Daftar Peserta Kuliah
+                                            </BtnCustom>
+                                        </a>
+                                    </div>
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/top-score.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/topScoreIPS.asp" target="__blank" rel="noopener noreferrer">Top Score</a>
-                                    </BtnCustom>
+                                    <div className="w-full">
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/topScoreIPS.asp" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                Top Score
+                                            </BtnCustom>
+                                        </a>
+                                    </div>
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/info-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <div id="list-info" className="flex flex-col gap-y-4 w-full">
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                            <a href="https://siamik.upnjatim.ac.id/html/siamik/infoPKL.asp" target="__blank" rel="noopener noreferrer">Info PKL</a>
-                                        </BtnCustom>
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                            <a href="https://siamik.upnjatim.ac.id/html/siamik/infoSkripsi.asp" target="__blank" rel="noopener noreferrer">Info Skripsi</a>
-                                        </BtnCustom>
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                            <a href="https://kiprah.upnjatim.ac.id/beasiswa/" target="__blank" rel="noopener noreferrer">Info Beasiswa</a>
-                                        </BtnCustom>
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/infoPKL.asp" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                Info PKL
+                                            </BtnCustom>
+                                        </a>
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/infoSkripsi.asp" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                Info Skripsi
+                                            </BtnCustom>
+                                        </a>
+                                        <a href="https://kiprah.upnjatim.ac.id/beasiswa/" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                Info Beasiswa
+                                            </BtnCustom>
+                                        </a>
                                     </div>
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/bimbingan-konseling-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                        <a href="https://kiprah.upnjatim.ac.id/bk/" target="__blank" rel="noopener noreferrer">Bimbingan dan Konseling</a>
-                                    </BtnCustom>
+                                    <div className="w-full">
+
+                                        <a href="https://kiprah.upnjatim.ac.id/bk/" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                Bimbingan dan Konseling
+                                            </BtnCustom>
+                                        </a>
+                                    </div>
                                 </CardPrimary>
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/wisuda-tracking-ijazah-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <div id="list-wisuda" className="flex flex-col gap-y-4 w-full">
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                            <a href="https://siamik.upnjatim.ac.id/wisuda2017/index.asp" target="__blank" rel="noopener noreferrer">Wisuda</a>
-                                        </BtnCustom>
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
-                                            <a href="https://siamik.upnjatim.ac.id/html/siamik/trackingIjazah.asp" target="__blank" rel="noopener noreferrer">Tracking Ijazah</a>
-                                        </BtnCustom>
+                                        <a href="https://siamik.upnjatim.ac.id/wisuda2017/index.asp" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                Wisuda
+                                            </BtnCustom>
+                                        </a>
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/trackingIjazah.asp" target="__blank" rel="noopener noreferrer">
+                                            <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 w-full">
+                                                Tracking Ijazah
+                                            </BtnCustom>
+                                        </a>
                                     </div>
                                 </CardPrimary>  
                             </div>
