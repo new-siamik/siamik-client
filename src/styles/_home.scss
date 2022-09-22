@@ -26,13 +26,18 @@
                     @media only screen and (max-width: 850px) {
                         display: none;
                     }
-                    button {
-                        width: 240px;
-                        height: 80px;
-                        font-size: 14px;
-                        border-radius: 10px;
-                        background-color: white;
+                }
+                .splide {
+                    @media only screen and (min-width: 850px) {
+                        display: none;
                     }
+                }
+                .siamik-highlight {
+                    width: 240px;
+                    height: 80px;
+                    font-size: 14px;
+                    border-radius: 10px;
+                    background-color: white;
                 }
             }
         }
@@ -90,6 +95,9 @@
                             h3 {
                                 @include text-head($gray-900, 20px, 600)
                             }
+                            > .btn-manual {
+                                @include transition(background-color, 0.2s)
+                            }
                         }
                     }
                 }
@@ -100,6 +108,9 @@
                         .item-list {
                             h3 {
                                 @include text-head($gray-900, 20px, 600)
+                            }
+                            > .btn-alur {
+                                @include transition(background-color, 0.2s)
                             }
                         }
                     }
