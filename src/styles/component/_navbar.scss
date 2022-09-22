@@ -153,6 +153,11 @@ header {
 
             &:last-child {
               margin-right: 0;
+               a {
+                  > button {
+                    @include transition(all, .2s); 
+                  }                
+               }
             }
             > span {
               @include transition(all, .2s);

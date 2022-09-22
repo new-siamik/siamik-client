@@ -110,7 +110,7 @@ export default function Navbar() {
                                     isActive ? 'nav-active' : ''
                                 }
                             >
-                                <BtnCustom classname="bg-white text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]">
+                                <BtnCustom classname="bg-white hover:bg-yellow-500 hover:text-neutral-100 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]">
                                     Login
                                 </BtnCustom>
                             </NavLink>
