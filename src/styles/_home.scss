@@ -140,8 +140,17 @@ footer {
                 }
     
                 > ul {
-                    li {
-                        @include text-head($neutral-3, 1rem, 500)
+                    > li {
+                        @include text-head($neutral-3, 1rem, 500);
+                        > a {
+                            @include transition(color, .2s);
+                            @media only screen and (min-width: 640px) {
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+                            &:focus {color: white;}
+                        }
                     }
                 }
             }
