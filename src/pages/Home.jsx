@@ -299,7 +299,7 @@ export default function Home() {
                                     <a href="http://febis.upnjatim.ac.id/">Fakultas Ekonomi dan Bisnis</a>
                                 </li>
                                 <li>
-                                    <a href="http://febis.upnjatim.ac.id/">Fakultas Pertanian</a>
+                                    <a href="https://faperta.upnjatim.ac.id/">Fakultas Pertanian</a>
                                 </li>
                                 <li>
                                     <a href="http://ft.upnjatim.ac.id/">Fakultas Teknik</a>
@@ -311,13 +311,13 @@ export default function Home() {
                                     <a href="http://fad.upnjatim.ac.id/">Fakultas Arsitektur dan Desain</a>
                                 </li>
                                 <li>
-                                    <a href="http://fad.upnjatim.ac.id/">Fakultas Hukum</a>
+                                    <a href="http://fhukum.upnjatim.ac.id/">Fakultas Hukum</a>
                                 </li>
                                 <li>
-                                    <a href="http://fik.upnjatim.ac.id/">Fakultas Ilmu Komputer</a>
+                                    <a href="http://fasilkom.upnjatim.ac.id/">Fakultas Ilmu Komputer</a>
                                 </li>
                                 <li>
-                                    <a href="http://pasca.upnjatim.ac.id/">Pasca Sarjana</a>
+                                    <a href="https://ppmb.upnjatim.ac.id/program-magister/">Pasca Sarjana</a>
                                 </li>
                             </ul>
                         </div>
@@ -336,13 +336,13 @@ export default function Home() {
                                     <a href="https://siortu.upnjatim.ac.id/">Sistem Informasi Orang Tua</a>
                                 </li>
                                 <li>
-                                    <a href="https://siortu.upnjatim.ac.id/">Sistem Informasi Mahasiswa Baru</a>
+                                    <a href="https://simaba.upnjatim.ac.id/index.html">Sistem Informasi Mahasiswa Baru</a>
                                 </li>
                                 <li>
                                     <a href="https://ilmu.upnjatim.ac.id/">E-Learning</a>
                                 </li>
                                 <li>
-                                    <a href="https://ilmu.upnjatim.ac.id/">E-Print</a>
+                                    <a href="http://eprints.upnjatim.ac.id/">E-Print</a>
                                 </li>
                                 <li>
                                     <a href="http://journals.upnjatim.ac.id/">E-Jurnal</a>
