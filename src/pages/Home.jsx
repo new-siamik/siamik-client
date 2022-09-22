@@ -159,7 +159,7 @@ export default function Home() {
                                         </a>
                                     </div>
                                 </CardPrimary> 
-                                <CardPrimary classname="box-other-service space-x-7">sm:
+                                <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/daftar-peserta-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
@@ -205,7 +205,7 @@ export default function Home() {
                                         </a>
                                     </div>
                                 </CardPrimary> 
-                                <CardPrimary classname="box-other-service space-x-7">sm:
+                                <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/bimbingan-konseling-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
