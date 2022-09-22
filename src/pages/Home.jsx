@@ -32,13 +32,13 @@ export default function Home() {
                         </section>
                         <section className="other-info mt-12">
                             <div className="box-other-info flex items-center space-x-7">
-                                <BtnCustom classname="inter shadow shadow-yellow-400 cursor-default" ripple="hidden">
+                                <BtnCustom classname="inter shadow shadow-yellow-400 cursor-default">
                                     PERTOR BIDANG 1 <br /> PERTOR NO.9 Tahun 2020
                                 </BtnCustom>
-                                <BtnCustom classname="inter shadow shadow-yellow-400 cursor-default" ripple="opacity-0">
+                                <BtnCustom classname="inter shadow shadow-yellow-400 cursor-default">
                                     Mahasiswa Aktif <br /> <span className="text-green-base font-semibold">19,351</span>
                                 </BtnCustom>
-                                <BtnCustom classname="inter shadow shadow-yellow-400 cursor-default flex flex-col justify-center items-center" ripple="hidden">
+                                <BtnCustom classname="inter shadow shadow-yellow-400 cursor-default flex flex-col justify-center items-center">
                                     <p>AKREDITASI</p>
                                     <p>Institusi BANPT</p>
                                     <p>Program Studi BANPT & FIBAA</p>

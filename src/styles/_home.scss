@@ -3,6 +3,9 @@
 .home-component {
     #container_home {
         #welcome_msg {
+            @media only screen and (max-width: 640px) {
+                padding: 0 1.5rem;
+            }
             @include flex-center;
             flex-direction: column;
             > .text-msg {
@@ -10,12 +13,20 @@
                     @include text-head($neutral-4, 2.25rem, 800);
                 }
                 > h3 {
+                    @media only screen and (max-width: 540px) {
+                        > br {
+                            display: none
+                        }
+                    }
                     @include text-head($neutral-3, 1rem, 500);
                 }
             }
             > .other-info {
                 .box-other-info {
-                    > button {
+                    @media only screen and (max-width: 850px) {
+                        display: none;
+                    }
+                    button {
                         width: 240px;
                         height: 80px;
                         font-size: 14px;

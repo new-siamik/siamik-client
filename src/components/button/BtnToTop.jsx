@@ -12,7 +12,7 @@ export default function BtnTopTop() {
     return (
         <svg id="button_scroll_top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="arcs"
         className={
-            classes(buttontotop ? 'right-8': "-right-20", 'sm:w-10 w-[1.5rem] text-yellow-600 hover:bg-green-base hover:text-neutral-200 hover:p-1 hover:rounded-full fixed bottom-4 cursor-pointer')
+            classes(buttontotop ? 'right-8': "-right-20", 'sm:w-10 w-[1.5rem] text-yellow-600 hover:bg-yellow-600 hover:text-neutral-200 hover:p-1 hover:rounded-full fixed bottom-4 cursor-pointer')
         }
         onClick={() => {
             window.scroll({
