@@ -1,15 +1,21 @@
 import React from "react"
 import { NavLink } from 'react-router-dom';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import "../styles/_home.scss";
+import '@splidejs/react-splide/css';
+import '@splidejs/react-splide/css/core';
+
 import Siamik from "../layouts/Siamik";
 import BtnCustom from "../components/button/BtnCustom";
 import CardPrimary from "../components/card/CardPrimary";
 // import BtnCustom from "../components/BtnCustom";
 
-export default function Home() {
 
+export default function Home() {
+    
     return (
+
         <Siamik
             title="SIAMIK - Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
             kw="siamik, new siamik, siamik upn jatim, siamik upn veteran jatim, sistem informasi akademik upn 'veteran' jatim"
@@ -22,7 +28,7 @@ export default function Home() {
         >
             <main className="home-component">
                 <div id="container_home">
-                    <article id="welcome_msg" className="text-center p-16 h-[555px]" style={{backgroundImage: `url(/assets/image/background-siamik.svg)`}}>
+                    <article id="welcome_msg" className="overflow-x-hidden text-center p-16 h-[555px]" style={{backgroundImage: `url(/assets/image/background-siamik.svg)`}}>
                         <section className="group-image mb-7">
                             <img src="/assets/image/group-image.svg" width={202} height={58} alt="Group Logo" />
                         </section>
@@ -32,21 +38,50 @@ export default function Home() {
                         </section>
                         <section className="other-info mt-12">
                             <div className="box-other-info flex items-center space-x-7">
-                                <BtnCustom classname="inter shadow shadow-yellow-400 cursor-default" ripple="hidden">
+                                <BtnCustom classname="siamik-highlight inter shadow shadow-yellow-400 cursor-default">
                                     PERTOR BIDANG 1 <br /> PERTOR NO.9 Tahun 2020
                                 </BtnCustom>
-                                <BtnCustom classname="inter shadow shadow-yellow-400 cursor-default" ripple="opacity-0">
+                                <BtnCustom classname="siamik-highlight inter shadow shadow-yellow-400 cursor-default">
                                     Mahasiswa Aktif <br /> <span className="text-green-base font-semibold">19,351</span>
                                 </BtnCustom>
-                                <BtnCustom classname="inter shadow shadow-yellow-400 cursor-default flex flex-col justify-center items-center" ripple="hidden">
+                                <BtnCustom classname="siamik-highlight inter shadow shadow-yellow-400 cursor-default flex flex-col justify-center items-center">
                                     <p>AKREDITASI</p>
                                     <p>Institusi BANPT</p>
                                     <p>Program Studi BANPT & FIBAA</p>
                                 </BtnCustom>
                             </div>
+                            <Splide aria-label="siamik-highlight"
+                                options={
+                                    {
+                                        width: 300,
+                                        rewind: true,
+                                        snap   : true,
+                                        drag   : 'free',
+                                        type   : 'loop',
+                                    }
+                                }>
+                                    <SplideSlide>
+                                        <BtnCustom classname="siamik-highlight inter shadow shadow-yellow-400 cursor-default">
+                                            PERTOR BIDANG 1 <br /> PERTOR NO.9 Tahun 2020
+                                        </BtnCustom>
+                                    </SplideSlide>
+                                    <SplideSlide>
+                                        <BtnCustom classname="siamik-highlight inter shadow shadow-yellow-400 cursor-default">
+                                            Mahasiswa Aktif <br /> <span className="text-green-base font-semibold">19,351</span>
+                                        </BtnCustom>
+                                    </SplideSlide>
+                                    <SplideSlide>
+                                        <BtnCustom classname="siamik-highlight inter shadow shadow-yellow-400 cursor-default flex flex-col justify-center items-center">
+                                            <p>AKREDITASI</p>
+                                            <p>Institusi BANPT</p>
+                                            <p>Program Studi BANPT & FIBAA</p>
+                                        </BtnCustom>
+                                    </SplideSlide>
+                                <div className="splide__arrows hidden" />
+                            </Splide>
                         </section>
                     </article>
-                    <article id="pengumuman" className="box-content px-16 space-y-7 mt-24">
+                    <article id="pengumuman" className="box-content sm:px-16 px-[1.5rem] space-y-7 mt-24">
                         <section className="title-article inter text-[1.25rem]">
                             <h1>Pengumuman</h1>
                         </section>
@@ -75,12 +110,12 @@ export default function Home() {
                             </CardPrimary> 
                         </section>
                     </article>
-                    <article id="other_service" className="box-content px-16 space-y-7 mt-24">
+                    <article id="other_service" className="box-content sm:px-16 px-[1.5rem] space-y-7 mt-24">
                         <section className="title-article inter text-[1.25rem]">
                             <h1>Layanan Lainnya</h1>
                         </section>
                         <section className="content-article">
-                            <div className="container lato grid grid-cols-4 gap-8">
+                            <div className="container lato grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/ukt-icon.svg" alt="Icon UKT" width={80}/>    
@@ -90,7 +125,7 @@ export default function Home() {
                                             <NavLink to="/wisuda">Wisuda</NavLink>
                                         </BtnCustom>
                                         <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2">
-                                            <NavLink to="/layanan-ukt">UKT</NavLink>
+                                            <a href="https://siamik.upnjatim.ac.id/html/siamik/ukt.asp" target="__blank" rel="noopener noreferrer">UKT</a>
                                         </BtnCustom>
                                         <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 invisible">
                                             <NavLink to="/tracking-ijazah">Tracking Ijazah</NavLink>
@@ -102,7 +137,7 @@ export default function Home() {
                                         <img src="/assets/image/calendar-academic.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <BtnCustom classname="border-2 border-green-base rounded-[5px]">
-                                        <NavLink to="/kalendar-akademik">TA. 2022/2023</NavLink>
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/umum/KALENDER_AKADEMIK-UPNVJT_2022_2023.pdf" download>TA. 2022/2023</a>
                                     </BtnCustom>
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
@@ -110,7 +145,7 @@ export default function Home() {
                                         <img src="/assets/image/kampus-merdeka-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <BtnCustom classname="border-2 border-green-base rounded-[5px]">
-                                        <NavLink to="/mbkm">MBKM</NavLink>
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/mbkm.asp" target="__blank" rel="noopener noreferrer">MBKM</a>
                                     </BtnCustom>
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
@@ -118,7 +153,7 @@ export default function Home() {
                                         <img src="/assets/image/daftar-peserta-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <BtnCustom classname="border-2 border-green-base rounded-[5px]">
-                                        <NavLink to="/daftar-peserta-kuliah">Daftar Peserta Kuliah</NavLink>
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/daftarPesertaKuliah.asp" target="__blank" rel="noopener noreferrer">Daftar Peserta Kuliah</a>
                                     </BtnCustom>
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
@@ -126,7 +161,7 @@ export default function Home() {
                                         <img src="/assets/image/top-score.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <BtnCustom classname="border-2 border-green-base rounded-[5px]">
-                                        <NavLink to="/top-score">Top Score</NavLink>
+                                        <a href="https://siamik.upnjatim.ac.id/html/siamik/topScoreIPS.asp" target="__blank" rel="noopener noreferrer">Top Score</a>
                                     </BtnCustom>
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
@@ -135,13 +170,13 @@ export default function Home() {
                                     </div>
                                     <div id="list-info" className="flex flex-col gap-y-4 w-full">
                                         <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2">
-                                            <NavLink to="/info-pkl">Info PKL</NavLink>
+                                            <a href="https://siamik.upnjatim.ac.id/html/siamik/infoPKL.asp" target="__blank" rel="noopener noreferrer">Info PKL</a>
                                         </BtnCustom>
                                         <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2">
-                                            <NavLink to="/info-skripsi">Info Skripsi</NavLink>
+                                            <a href="https://siamik.upnjatim.ac.id/html/siamik/infoSkripsi.asp" target="__blank" rel="noopener noreferrer">Info Skripsi</a>
                                         </BtnCustom>
                                         <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2">
-                                            <NavLink to="/info-beasiswa">Info Beasiswa</NavLink>
+                                            <a href="https://kiprah.upnjatim.ac.id/beasiswa/" target="__blank" rel="noopener noreferrer">Info Beasiswa</a>
                                         </BtnCustom>
                                     </div>
                                 </CardPrimary> 
@@ -150,7 +185,7 @@ export default function Home() {
                                         <img src="/assets/image/bimbingan-konseling-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <BtnCustom classname="border-2 border-green-base rounded-[5px]">
-                                        <NavLink to="/layanan-konseling">Bimbingan dan Konseling</NavLink>
+                                        <a href="https://kiprah.upnjatim.ac.id/bk/" target="__blank" rel="noopener noreferrer">Bimbingan dan Konseling</a>
                                     </BtnCustom>
                                 </CardPrimary>
                                 <CardPrimary classname="box-other-service space-x-7">
@@ -159,41 +194,37 @@ export default function Home() {
                                     </div>
                                     <div id="list-wisuda" className="flex flex-col gap-y-4 w-full">
                                         <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2">
-                                            <NavLink to="/wisuda">Wisuda</NavLink>
+                                            <a href="https://siamik.upnjatim.ac.id/wisuda2017/index.asp" target="__blank" rel="noopener noreferrer">Wisuda</a>
                                         </BtnCustom>
                                         <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2">
-                                            <NavLink to="/tracking-ijazah">Tracking Ijazah</NavLink>
+                                            <a href="https://siamik.upnjatim.ac.id/html/siamik/trackingIjazah.asp" target="__blank" rel="noopener noreferrer">Tracking Ijazah</a>
                                         </BtnCustom>
                                     </div>
                                 </CardPrimary>  
                             </div>
                         </section>
                     </article>
-                    <article id="manual_panduan" className="box-content px-16 space-y-7 mt-24">
+                    <article id="manual_panduan" className="box-content sm:px-16 px-[1.5rem] space-y-7 mt-24">
                         <section className="title-article inter text-[1.25rem]">
                             <h1>Manual / Panduan</h1>
                         </section>
                         <section className="content-article">
                             <div className="container inter">
                                 <CardPrimary classname="flex w-full gap-x-16">
-                                    <div id="manual-image">
+                                    <div id="manual-image" className="lg:block hidden">
                                         <img src="/assets/image/manual-illus.svg" alt="Gambar Manual/Panduan"/>
                                     </div>
-                                    <div id="manual-list" className="pt-12 space-y-12">
+                                    <div id="manual-list" className="p-12 space-y-12">
                                         <div className="item-list item-1">
                                             <h3>Cara Isi KRS (Kartu Rencana Studi)</h3>
-                                            <BtnCustom classname="btn-pengumuman inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
-                                                <NavLink to="/">
-                                                    Lihat PDF
-                                                </NavLink>
+                                            <BtnCustom classname="btn-manual inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
+                                                <a href="https://siamik.upnjatim.ac.id/html/siamik/umum/PANDUAN_KRS_UPNV_JATIM.pdf">Lihat PDF</a>
                                             </BtnCustom>
                                         </div>
                                         <div className="item-list item-2">
-                                            <h3>Cara Isi KRS (Kartu Rencana Studi)</h3>
-                                            <BtnCustom classname="btn-pengumuman inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
-                                                <NavLink to="/">
-                                                    Lihat PDF
-                                                </NavLink>
+                                            <h3>Buku Pedoman Akademik</h3>
+                                            <BtnCustom classname="btn-manual inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
+                                                <a href="https://siamik.upnjatim.ac.id/html/siamik/bukupedomanakademik.asp">Lihat PDF</a>
                                             </BtnCustom>
                                         </div>
                                     </div>
@@ -201,31 +232,27 @@ export default function Home() {
                             </div>
                         </section>
                     </article>
-                    <article id="alur" className="box-content px-16 space-y-7 mt-24">
+                    <article id="alur" className="box-content sm:px-16 px-[1.5rem] space-y-7 mt-24">
                         <section className="title-article inter text-[1.25rem]">
                             <h1>Alur</h1>
                         </section>
                         <section className="content-article">
                             <div className="container inter">
                                 <CardPrimary classname="flex w-full gap-x-16">
-                                    <div id="alur-image">
+                                    <div id="alur-image" className="lg:block hidden">
                                         <img src="/assets/image/alur-illus.svg" alt="Gambar Alur"/>
                                     </div>
-                                    <div id="alur-list" className="pt-12 space-y-12">
+                                    <div id="alur-list" className="p-12 space-y-12">
                                         <div className="item-list item-1">
                                             <h3>Alur MBKM Outbond</h3>
-                                            <BtnCustom classname="btn-pengumuman inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
-                                                <NavLink to="/">
-                                                    Lihat PDF
-                                                </NavLink>
+                                            <BtnCustom classname="btn-alur inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
+                                                <a href="https://siamik.upnjatim.ac.id/html/siamik/mbkm/SURAT_PEMBERITAHUAN_MBKM_GENAP_2022_MHS.pdf">Lihat PDF</a>
                                             </BtnCustom>
                                         </div>
                                         <div className="item-list item-2">
                                             <h3>Alur MBKM Permata Merdeka 42 PTN</h3>
-                                            <BtnCustom classname="btn-pengumuman inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
-                                                <NavLink to="/">
-                                                    Lihat PDF
-                                                </NavLink>
+                                            <BtnCustom classname="btn-alur inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
+                                                <a href="https://siamik.upnjatim.ac.id/html/siamik/images/mbkmPermataMerdeka.jfif">Lihat PDF</a>
                                             </BtnCustom>
                                         </div>
                                     </div>
@@ -233,19 +260,15 @@ export default function Home() {
                             </div>
                         </section>
                     </article>
-                    <article id="versi_aplikasi" className="box-content px-16 space-y-7 my-24">
+                    <article id="versi_aplikasi" className="box-content sm:px-16 px-[1.5rem] space-y-7 my-24">
                         <div className="container">
                             <CardPrimary classname="p-7">
                                 <h3 className="inter font-medium text-[20px]">Versi Aplikasi</h3>
                                 <div id="versi-list" className="pt-4 lato">
                                     <ul className="space-y-6">
                                         <li>
-                                            <span className="font-semibold">01 Juni 2022 </span><br />
-                                            Sistem Informasi Akademik (SIAMIK) 2022 Versi 01.30 - <span className="italic">Pendaftaran UAS</span>
-                                        </li>
-                                        <li>
-                                            <span className="font-semibold">26 April 2022 </span><br />
-                                            Sistem Informasi Akademik (SIAMIK) 2022 Versi 01.30 - <span className="italic">Reset password SIAMIK Mahasiswa</span>
+                                            <span className="font-semibold">22 September 2022 </span><br />
+                                            Sistem Informasi Akademik (SIAMIK) 2022 Versi 0.0.2 - <span className="italic">Landing Page</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -273,28 +296,28 @@ export default function Home() {
                             </h1>
                             <ul className="list-disc list-inside space-y-3">
                                 <li>
-                                    <a href="/">Fakultas Ekonomi dan Bisnis</a>
+                                    <a href="http://febis.upnjatim.ac.id/">Fakultas Ekonomi dan Bisnis</a>
                                 </li>
                                 <li>
-                                    <a href="/">Fakultas Pertanian</a>
+                                    <a href="http://febis.upnjatim.ac.id/">Fakultas Pertanian</a>
                                 </li>
                                 <li>
-                                    <a href="/">Fakultas Teknik</a>
+                                    <a href="http://ft.upnjatim.ac.id/">Fakultas Teknik</a>
                                 </li>
                                 <li>
-                                    <a href="/">Fakultas Ilmu Sosial dan Politik</a>
+                                    <a href="http://fisip.upnjatim.ac.id/">Fakultas Ilmu Sosial dan Politik</a>
                                 </li>
                                 <li>
-                                    <a href="/">Fakultas Arsitektur dan Desain</a>
+                                    <a href="http://fad.upnjatim.ac.id/">Fakultas Arsitektur dan Desain</a>
                                 </li>
                                 <li>
-                                    <a href="/">Fakultas Hukum</a>
+                                    <a href="http://fad.upnjatim.ac.id/">Fakultas Hukum</a>
                                 </li>
                                 <li>
-                                    <a href="/">Fakultas Ilmu Komputer</a>
+                                    <a href="http://fik.upnjatim.ac.id/">Fakultas Ilmu Komputer</a>
                                 </li>
                                 <li>
-                                    <a href="/">Pasca Sarjana</a>
+                                    <a href="http://pasca.upnjatim.ac.id/">Pasca Sarjana</a>
                                 </li>
                             </ul>
                         </div>
@@ -304,34 +327,40 @@ export default function Home() {
                             </h1>
                             <ul className="list-disc list-inside space-y-3">
                                 <li>
-                                    <a href="/">Web UPN Veteran Jawa Timur</a>
+                                    <a href="http://www.upnjatim.ac.id/">Web UPN Veteran Jawa Timur</a>
                                 </li>
                                 <li>
-                                    <a href="/">Sistem Informasi Akademik Pasca Sarjana</a>
+                                    <a href="https://siamik.upnjatim.ac.id/pasca/html/siamikpasca/index.asp">Sistem Informasi Akademik Pasca Sarjana</a>
                                 </li>
                                 <li>
-                                    <a href="/">Sistem Informasi Orang Tua</a>
+                                    <a href="https://siortu.upnjatim.ac.id/">Sistem Informasi Orang Tua</a>
                                 </li>
                                 <li>
-                                    <a href="/">Sistem Informasi Mahasiswa </a>
+                                    <a href="https://siortu.upnjatim.ac.id/">Sistem Informasi Mahasiswa Baru</a>
                                 </li>
                                 <li>
-                                    <a href="/">E-Learning</a>
+                                    <a href="https://ilmu.upnjatim.ac.id/">E-Learning</a>
                                 </li>
                                 <li>
-                                    <a href="/">E-Print</a>
+                                    <a href="https://ilmu.upnjatim.ac.id/">E-Print</a>
                                 </li>
                                 <li>
-                                    <a href="/">E-Jurnal</a>
+                                    <a href="http://journals.upnjatim.ac.id/">E-Jurnal</a>
                                 </li>
                                 <li>
-                                    <a href="/">Katalong Online</a>
+                                    <a href="https://siamik.upnjatim.ac.id/siska/info.asp">Katalong Online</a>
                                 </li>
                                 <li>
-                                    <a href="/">Dokumen</a>
+                                    <a href="https://www.upnjatim.ac.id/download-category/dokumen/">Dokumen</a>
                                 </li>
                                 <li>
-                                    <a href="/">KIPRAH (Knouledgeble Innovative Productive Resilent Agile Honest)</a>
+                                    <a href="http://kiprah.upnjatim.ac.id/">KIPRAH (Knouledgeble Innovative Productive Resilent Agile Honest)</a>
+                                </li>
+                                <li>
+                                    <a href="http://saestu.upnjatim.ac.id/">Sistem Informasi Akademik & Kemahasiswaan Satu Pintu</a>
+                                </li>
+                                <li>
+                                    <a href="http://siadu.upnjatim.ac.id/">Sistem Informasi Aduan</a>
                                 </li>
                             </ul>
                         </div>
@@ -351,4 +380,5 @@ export default function Home() {
             </footer>
         </Siamik>
     )
+    
 }

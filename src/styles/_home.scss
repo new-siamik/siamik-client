@@ -3,6 +3,9 @@
 .home-component {
     #container_home {
         #welcome_msg {
+            @media only screen and (max-width: 640px) {
+                padding: 0 1.5rem;
+            }
             @include flex-center;
             flex-direction: column;
             > .text-msg {
@@ -10,18 +13,31 @@
                     @include text-head($neutral-4, 2.25rem, 800);
                 }
                 > h3 {
+                    @media only screen and (max-width: 540px) {
+                        > br {
+                            display: none
+                        }
+                    }
                     @include text-head($neutral-3, 1rem, 500);
                 }
             }
             > .other-info {
                 .box-other-info {
-                    > button {
-                        width: 240px;
-                        height: 80px;
-                        font-size: 14px;
-                        border-radius: 10px;
-                        background-color: white;
+                    @media only screen and (max-width: 850px) {
+                        display: none;
                     }
+                }
+                .splide {
+                    @media only screen and (min-width: 850px) {
+                        display: none;
+                    }
+                }
+                .siamik-highlight {
+                    width: 240px;
+                    height: 80px;
+                    font-size: 14px;
+                    border-radius: 10px;
+                    background-color: white;
                 }
             }
         }
@@ -79,6 +95,9 @@
                             h3 {
                                 @include text-head($gray-900, 20px, 600)
                             }
+                            > .btn-manual {
+                                @include transition(background-color, 0.2s)
+                            }
                         }
                     }
                 }
@@ -89,6 +108,9 @@
                         .item-list {
                             h3 {
                                 @include text-head($gray-900, 20px, 600)
+                            }
+                            > .btn-alur {
+                                @include transition(background-color, 0.2s)
                             }
                         }
                     }
