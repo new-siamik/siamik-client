@@ -20,6 +20,23 @@ export default function Navbar() {
     // const [user, setUser] = React.useState([])
     // const [loading, setLoading] = React.useState(true)
 
+    const scrollPeng = () => {
+        const scrollTo = document.getElementById('pengumuman').offsetTop
+        window.scrollTo({ top: scrollTo-120, behavior: 'smooth'});
+    }
+    const scrollLay = () => {
+        const scrollTo = document.getElementById('other_service').offsetTop
+        window.scrollTo({ top: scrollTo-120, behavior: 'smooth'});
+    }
+    const scrollMan = () => {
+        const scrollTo = document.getElementById('manual_panduan').offsetTop
+        window.scrollTo({ top: scrollTo-120, behavior: 'smooth'});
+    }
+    const scrollAlur = () => {
+        const scrollTo = document.getElementById('alur').offsetTop
+        window.scrollTo({ top: scrollTo-120, behavior: 'smooth'});
+    }
+
     return (
         <header>
             <nav id="navbar_component">   
@@ -44,36 +61,48 @@ export default function Navbar() {
                 <div id="nav_links">
                     <ul id="nav_links_item" className="inter">
                         <li>
-                            <NavLink
+                            <span onClick={scrollPeng}>
+                                Pengumuman
+                            </span>
+                            {/* <NavLink
                                 className={({ isActive }) =>
                                     isActive ? 'nav-active' : ''
-                                } to="/pengumuman">
+                                } to="/">
                                 Pengumuman
-                            </NavLink>
+                            </NavLink> */}
                         </li>
                         <li>
-                            <NavLink 
+                            <span onClick={scrollLay}>
+                                Layanan Lainnya
+                            </span>
+                            {/* <NavLink 
                                 className={({ isActive }) =>
                                         isActive ? 'nav-active' : ''
                                 } to="/layanan">
                                 Layanan Lainnya
-                            </NavLink>
+                            </NavLink> */}
                         </li>
                         <li>
-                            <NavLink to="/panduan"
+                            <span onClick={scrollMan}>
+                                Manual/Panduan
+                            </span>
+                            {/* <NavLink to="/panduan"
                                 className={({ isActive }) =>
                                     isActive ? 'nav-active' : ''
                                 }>
                                 Manual/Panduan
-                            </NavLink>
+                            </NavLink> */}
                         </li>
                         <li>
-                            <NavLink to="/alur"
+                            <span onClick={scrollAlur}>
+                                Alur
+                            </span>
+                            {/* <NavLink to="/alur"
                                 className={({ isActive }) =>
                                     isActive ? 'nav-active' : ''
                                 }>
                                 Alur
-                            </NavLink>
+                            </NavLink> */}
                         </li>
                         <li>
                             <NavLink to="/signin"
