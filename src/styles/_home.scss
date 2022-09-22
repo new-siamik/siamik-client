@@ -65,7 +65,11 @@
                         }
                     }
                     > .btn-pengumuman {
-                        @include transition(background-color, 0.2s)
+                        @include transition(background-color, 0.2s);
+
+                        @media only screen and (max-width: 411px) {
+                            width: 100%;
+                        }
                     }
                     > .btn-more-pengumuman {
                         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 6px;
@@ -96,7 +100,10 @@
                                 @include text-head($gray-900, 20px, 600)
                             }
                             > .btn-manual {
-                                @include transition(background-color, 0.2s)
+                                @include transition(background-color, 0.2s);
+                                @media only screen and (max-width: 480px) {
+                                    width: 100%;
+                                }
                             }
                         }
                     }
@@ -110,7 +117,10 @@
                                 @include text-head($gray-900, 20px, 600)
                             }
                             > .btn-alur {
-                                @include transition(background-color, 0.2s)
+                                @include transition(background-color, 0.2s);
+                                @media only screen and (max-width: 480px) {
+                                    width: 100%;
+                                }
                             }
                         }
                     }

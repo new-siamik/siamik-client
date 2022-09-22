@@ -97,12 +97,12 @@ export default function Home() {
                                         Bagi mahasiswa TA. 2021, yang bermasalah dalam pembuatan KTM, mohon untuk segera ke Gedung BAKPK untuk meminta SURAT KETERANGAN PEMBUATAN KTM MANUAL dan selanjutnya dapat dipakai untukpembuatan KTM melalui BNI Cabang UPN di Jl. Raya Rungkut Madya Gunung Anyar Surabaya.
                                     </p>
                                 </div>
-                                <BtnCustom classname="btn-pengumuman inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
+                                <BtnCustom classname="btn-pengumuman inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
                                     <NavLink to="/">
                                         Lihat PDF
                                     </NavLink>
                                 </BtnCustom>
-                                <BtnCustom classname="btn-more-pengumuman block ml-auto inter mt-6 px-8 py-3 rounded-[5px] text-green-base hover:text-neutral-100 bg-white hover:bg-green-base transition-colors duration-200">
+                                <BtnCustom classname="btn-more-pengumuman block ml-auto inter mt-6 px-8 py-3 rounded-[5px] text-green-base sm:hover:text-neutral-100 bg-white sm:hover:bg-green-base focus:sm:hover:text-neutral-10 focus:bg-green-base transition-colors duration-200">
                                     <NavLink to="#">
                                         Lihat Semua Pengumuman
                                     </NavLink>
@@ -121,13 +121,13 @@ export default function Home() {
                                         <img src="/assets/image/ukt-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <div id="list-wisuda" className="flex flex-col gap-y-4 w-full">
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 invisible">
+                                        <BtnCustom classname="md:block hidden border-2 border-green-base rounded-[5px] text-left py-1 px-2 invisible">
                                             <NavLink to="/wisuda">Wisuda</NavLink>
                                         </BtnCustom>
-                                        <BtnCustom classname="border-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 border-green-base rounded-[5px] text-left py-1 px-2">
+                                        <BtnCustom classname="border-2 transition-colors duration-200 hover:bg-green-base/80 sm:hover:text-neutral-100 hover:shadow-md sm:hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80 border-green-base rounded-[5px] text-left py-1 px-2">
                                             <a href="https://siamik.upnjatim.ac.id/html/siamik/ukt.asp" target="__blank" rel="noopener noreferrer">UKT</a>
                                         </BtnCustom>
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 invisible">
+                                        <BtnCustom classname="md:block hidden border-2 border-green-base rounded-[5px] text-left py-1 px-2 invisible">
                                             <NavLink to="/tracking-ijazah">Tracking Ijazah</NavLink>
                                         </BtnCustom>
                                     </div>
@@ -136,7 +136,7 @@ export default function Home() {
                                     <div id="icon_service">
                                         <img src="/assets/image/calendar-academic.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80">
+                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                         <a href="https://siamik.upnjatim.ac.id/html/siamik/umum/KALENDER_AKADEMIK-UPNVJT_2022_2023.pdf" download>TA. 2022/2023</a>
                                     </BtnCustom>
                                 </CardPrimary> 
@@ -144,7 +144,7 @@ export default function Home() {
                                     <div id="icon_service">
                                         <img src="/assets/image/kampus-merdeka-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80e">
+                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                         <a href="https://siamik.upnjatim.ac.id/html/siamik/mbkm.asp" target="__blank" rel="noopener noreferrer">MBKM</a>
                                     </BtnCustom>
                                 </CardPrimary> 
@@ -152,7 +152,7 @@ export default function Home() {
                                     <div id="icon_service">
                                         <img src="/assets/image/daftar-peserta-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80">
+                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                         <a href="https://siamik.upnjatim.ac.id/html/siamik/daftarPesertaKuliah.asp" target="__blank" rel="noopener noreferrer">Daftar Peserta Kuliah</a>
                                     </BtnCustom>
                                 </CardPrimary> 
@@ -160,7 +160,7 @@ export default function Home() {
                                     <div id="icon_service">
                                         <img src="/assets/image/top-score.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80">
+                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                         <a href="https://siamik.upnjatim.ac.id/html/siamik/topScoreIPS.asp" target="__blank" rel="noopener noreferrer">Top Score</a>
                                     </BtnCustom>
                                 </CardPrimary> 
@@ -169,13 +169,13 @@ export default function Home() {
                                         <img src="/assets/image/info-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <div id="list-info" className="flex flex-col gap-y-4 w-full">
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80">
+                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                             <a href="https://siamik.upnjatim.ac.id/html/siamik/infoPKL.asp" target="__blank" rel="noopener noreferrer">Info PKL</a>
                                         </BtnCustom>
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80">
+                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                             <a href="https://siamik.upnjatim.ac.id/html/siamik/infoSkripsi.asp" target="__blank" rel="noopener noreferrer">Info Skripsi</a>
                                         </BtnCustom>
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80">
+                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                             <a href="https://kiprah.upnjatim.ac.id/beasiswa/" target="__blank" rel="noopener noreferrer">Info Beasiswa</a>
                                         </BtnCustom>
                                     </div>
@@ -184,7 +184,7 @@ export default function Home() {
                                     <div id="icon_service">
                                         <img src="/assets/image/bimbingan-konseling-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
-                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80">
+                                    <BtnCustom classname="border-2 border-green-base rounded-[5px] transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                         <a href="https://kiprah.upnjatim.ac.id/bk/" target="__blank" rel="noopener noreferrer">Bimbingan dan Konseling</a>
                                     </BtnCustom>
                                 </CardPrimary>
@@ -193,10 +193,10 @@ export default function Home() {
                                         <img src="/assets/image/wisuda-tracking-ijazah-icon.svg" alt="Icon UKT" width={80}/>    
                                     </div>
                                     <div id="list-wisuda" className="flex flex-col gap-y-4 w-full">
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80">
+                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                             <a href="https://siamik.upnjatim.ac.id/wisuda2017/index.asp" target="__blank" rel="noopener noreferrer">Wisuda</a>
                                         </BtnCustom>
-                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80">
+                                        <BtnCustom classname="border-2 border-green-base rounded-[5px] text-left py-1 px-2 transition-colors duration-200 hover:bg-green-base/80 hover:text-neutral-100 hover:shadow-md hover:border-green-base/80 focus:text-neutral-100 focus:bg-green-base/80">
                                             <a href="https://siamik.upnjatim.ac.id/html/siamik/trackingIjazah.asp" target="__blank" rel="noopener noreferrer">Tracking Ijazah</a>
                                         </BtnCustom>
                                     </div>
@@ -217,13 +217,13 @@ export default function Home() {
                                     <div id="manual-list" className="p-12 space-y-12">
                                         <div className="item-list item-1">
                                             <h3>Cara Isi KRS (Kartu Rencana Studi)</h3>
-                                            <BtnCustom classname="btn-manual inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
+                                            <BtnCustom classname="btn-manual inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
                                                 <a href="https://siamik.upnjatim.ac.id/html/siamik/umum/PANDUAN_KRS_UPNV_JATIM.pdf">Lihat PDF</a>
                                             </BtnCustom>
                                         </div>
                                         <div className="item-list item-2">
                                             <h3>Buku Pedoman Akademik</h3>
-                                            <BtnCustom classname="btn-manual inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
+                                            <BtnCustom classname="btn-manual inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80 focus:bg-green-base/80">
                                                 <a href="https://siamik.upnjatim.ac.id/html/siamik/bukupedomanakademik.asp">Lihat PDF</a>
                                             </BtnCustom>
                                         </div>
@@ -245,13 +245,13 @@ export default function Home() {
                                     <div id="alur-list" className="p-12 space-y-12">
                                         <div className="item-list item-1">
                                             <h3>Alur MBKM Outbond</h3>
-                                            <BtnCustom classname="btn-alur inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
+                                            <BtnCustom classname="btn-alur inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80 focus:bg-green-base/80">
                                                 <a href="https://siamik.upnjatim.ac.id/html/siamik/mbkm/SURAT_PEMBERITAHUAN_MBKM_GENAP_2022_MHS.pdf">Lihat PDF</a>
                                             </BtnCustom>
                                         </div>
                                         <div className="item-list item-2">
                                             <h3>Alur MBKM Permata Merdeka 42 PTN</h3>
-                                            <BtnCustom classname="btn-alur inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80">
+                                            <BtnCustom classname="btn-alur inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base hover:bg-green-base/80 focus:bg-green-base/80">
                                                 <a href="https://siamik.upnjatim.ac.id/html/siamik/images/mbkmPermataMerdeka.jfif">Lihat PDF</a>
                                             </BtnCustom>
                                         </div>
@@ -266,9 +266,9 @@ export default function Home() {
                                 <h3 className="inter font-medium text-[20px]">Versi Aplikasi</h3>
                                 <div id="versi-list" className="pt-4 lato">
                                     <ul className="space-y-6">
-                                        <li>
-                                            <span className="font-semibold">22 September 2022 </span><br />
-                                            Sistem Informasi Akademik (SIAMIK) 2022 Versi 0.0.2 - <span className="italic">Landing Page</span>
+                                        <li className="flex flex-col space-y-2">
+                                            <span className="font-semibold">22 September 2022 </span>
+                                            <span>Sistem Informasi Akademik (SIAMIK) 2022 Versi 0.0.2 - <span className="italic">Landing Page</span></span>
                                         </li>
                                     </ul>
                                 </div>
