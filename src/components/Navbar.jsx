@@ -1,16 +1,16 @@
-import React, { Fragment } from "react"
+import React from "react"
 // import Swal from "sweetalert2"
 // import axios from "../api/axios";
 // import AuthBtn from "./auth/AuthBtn";
 import { NavLink } from 'react-router-dom';
-import { Popover, Transition } from '@headlessui/react'
-// import { EnvelopeIcon } from '@heroicons/react/20/outline'
+import { EnvelopeIcon } from '@heroicons/react/24/solid'
 
 import "../styles/component/_navbar.scss";
 
 // import Image from "./Image";
 import { classes } from "../utils/Classes";
 import BtnCustom from "./button/BtnCustom";
+import FormCard from "./auth/form/FormCard";
 import FormInput from "./auth/form/input/FormInput";
 import CardPrimary from "../components/card/CardPrimary";
 import PasswordField from "../components/auth/form/input/PasswordField"
@@ -25,10 +25,10 @@ export default function Navbar() {
     const inputs = [
         {
             key: 1,
-            type: "email",
-            name: "email",
-            id: "email",
-            errorMessage: "Email harus berupa alamat email yang valid!",
+            type: "npm",
+            name: "npm",
+            id: "npm",
+            errorMessage: "Kolom NPM harus diisi dan benar!",
             classname: "mt-7",
             required: true,
             placeholder: "NPM (Nomor Pokok Mahasiswa)"
@@ -136,60 +136,52 @@ export default function Navbar() {
                             </NavLink> */}
                         </li>
                         <li>
-                            <Popover as="div">
-                                <Popover.Button className="button-login bg-white focus:outline-none hover:bg-yellow-base ui-open:bg-yellow-base ui-open:ring-2 ui-open:ring-neutral-200 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]">
-                                        Masuk
-                                </Popover.Button>
-                                <Popover.Overlay className="fixed inset-0 bg-neutral-900 opacity-40" />
-                                <Transition
-                                    as={Fragment}
-                                    enter="transition duration-100 ease-out"
-                                    enterFrom="transform scale-95 opacity-0"
-                                    enterTo="transform scale-100 opacity-100"
-                                    leave="transition duration-75 ease-out"
-                                    leaveFrom="transform scale-100 opacity-100"
-                                    leaveTo="transform scale-95 opacity-0"
-                                >
-                                    <Popover.Panel className="form-group fixed top-6 right-0 z-10 flex items-center justify-center overflow-y-auto overflow-x-hidden w-full h-full invisible">
-                                        <div className="visible relative z-20">
-                                            <CardPrimary>
-                                                <form method="POST"
-                                                    className="relative bg-white p-10 w-[620px] h-[500px] rounded-b-[8px] overflow-y-scroll"
-                                                    onSubmit={handleSubmit}
-                                                    encType="multipart/form-data"
-                                                >
-                                                    <div id="form-content">
-                                                        <div className="flex justify-center img-form mb-5">
-                                                            <img src="/assets/image/login.svg" width={82} height={82} alt="Icon Login" />
-                                                        </div>
-                                                        <h2 className="form-title inter text-[20px] font-bold text-neutral-900 hover:text-neutral-900 ">Masuk Ke SIAMIK</h2>
-                                                        <div className="flex flex-col items-center justify-center">
-                                                            {inputs.map((input) => (
-                                                                <FormInput
-                                                                    key={input.key}
-                                                                    {...input}
-                                                                    value={values[input.name]}
-                                                                    onChange={onChange}
-                                                                />
-                                                            ))}
-                                                            <PasswordField 
-                                                                required="required"
+                            <FormCard 
+                                classButton = {`button-login bg-white focus:outline-none hover:bg-yellow-base ui-open:bg-yellow-base  ui-open:ring-2 ui-open:ring-neutral-200 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]`}
+                                classOverlay = {`fixed inset-0 bg-neutral-900 opacity-40`}
+                                classPanel = {`form-group fixed top-6 right-0 z-10 flex items-center justify-center overflow-y-auto overflow-x-hidden w-full h-full invisible`}
+                            >
+                                <div className="visible relative z-20">
+                                    <CardPrimary>
+                                        <form method="POST"
+                                            className="relative bg-white p-10 w-[620px] h-[500px] rounded-b-[8px] overflow-y-scroll"
+                                            onSubmit={handleSubmit}
+                                            encType="multipart/form-data"
+                                        >
+                                            <div id="form-content">
+                                                <div className="flex justify-center img-form mb-5">
+                                                    <img src="/assets/image/login.svg" width={82} height={82} alt="Icon Login" />
+                                                </div>
+                                                <h2 className="form-title inter text-[20px] font-bold text-neutral-900 hover:text-neutral-900 ">Masuk Ke SIAMIK</h2>
+                                                <div className="flex flex-col items-center justify-center">
+                                                    {inputs.map((input) => (
+                                                        input.name === "npm" ?
+                                                            <FormInput
+                                                                key={input.key}
+                                                                {...input}
+                                                                value={values[input.name]}
                                                                 onChange={onChange}
-                                                            />
-                                                        </div>
-                                                        <div className="w-full inter text-right mt-6 font-semibold cursor-pointer text-green-base sm:hover:underline sm:hover:underline-offset-4">
-                                                            <h3>Lupa Kata Sandi ?</h3>
-                                                        </div>
-                                                        <BtnCustom type="submit" classname="btn-form-submit w-full btn-pengumuman inter mt-10 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
-                                                            Masuk
-                                                        </BtnCustom>
-                                                    </div> 
-                                                </form>
-                                            </CardPrimary>
-                                        </div>                                            
-                                    </Popover.Panel>
-                                </Transition>
-                            </Popover>
+                                                            >
+                                                                <EnvelopeIcon className="w-5 h-5 text-green-base" aria-hidden="true" />
+                                                            </FormInput>
+                                                        : false
+                                                    ))}
+                                                    <PasswordField 
+                                                        required="required"
+                                                        onChange={onChange}
+                                                    />
+                                                </div>
+                                                <div className="w-full inter text-right mt-6 font-semibold cursor-pointer text-green-base sm:hover:underline sm:hover:underline-offset-4">
+                                                    <h3>Lupa Kata Sandi ?</h3>
+                                                </div>
+                                                <BtnCustom type="submit" classname="btn-form-submit w-full btn-pengumuman inter mt-10 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
+                                                    Masuk
+                                                </BtnCustom>
+                                            </div> 
+                                        </form>
+                                    </CardPrimary>
+                                </div>                                            
+                            </FormCard>
                         </li>
 
                         {/* {
