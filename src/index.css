@@ -50,8 +50,8 @@
     -webkit-box-orient: vertical;
   }
   *::selection {
-    color: white;
-    background-color: #2C4C37;
+    color: #2C4C37;
+    background-color: #F3E425;
   }
   *::-webkit-scrollbar {
     width: 9px;

@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@headlessui/react": "^1.6.6",
+    "@headlessui/react": "^1.7.2",
+    "@headlessui/tailwindcss": "^0.1.1",
+    "@heroicons/react": "^2.0.11",
     "@splidejs/react-splide": "^0.7.11",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",

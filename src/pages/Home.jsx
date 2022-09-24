@@ -9,7 +9,6 @@ import '@splidejs/react-splide/css/core';
 import Siamik from "../layouts/Siamik";
 import BtnCustom from "../components/button/BtnCustom";
 import CardPrimary from "../components/card/CardPrimary";
-// import BtnCustom from "../components/BtnCustom";
 
 
 export default function Home() {
