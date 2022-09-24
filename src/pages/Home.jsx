@@ -90,18 +90,18 @@ export default function Home() {
                             <CardPrimary classname="box-pengumuman p-7">
                                 <div id="date_pengumuman" className="lato">
                                     <img src="/assets/image/calendar-academic.svg" alt="Icon Calendar Academic" width={20}/>
-                                    <h3>19 Agustus 2022 | 14:27 WIB</h3>
+                                    <h3>31 Agustus 2022 | 16:26 WIB</h3>
                                 </div>
                                 <div id="content_pengumuman" className="lato">
-                                    <h3>Pembuatan KTM Bagi Mhs.2021 yang Bermasalah</h3>
+                                    <h3>Rekruitmen Pendamping KKN Tematik MBKM Tahun 2022</h3>
                                     <p>
-                                        Bagi mahasiswa TA. 2021, yang bermasalah dalam pembuatan KTM, mohon untuk segera ke Gedung BAKPK untuk meminta SURAT KETERANGAN PEMBUATAN KTM MANUAL dan selanjutnya dapat dipakai untukpembuatan KTM melalui BNI Cabang UPN di Jl. Raya Rungkut Madya Gunung Anyar Surabaya.
+                                    Rekrutmen Pendamping KKN Tematik MBKM Tahun 2022. Keterangan lebih lanjut bisa lihat pdf dibawah ini.
                                     </p>
                                 </div>
                                 <BtnCustom classname="btn-pengumuman inter mt-6 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
-                                    <NavLink to="/">
+                                    <a href="https://siamik.upnjatim.ac.id/html/siamik/umum/rekrutmenPendampingKKNTematikMBKM2022.pdf">
                                         Lihat PDF
-                                    </NavLink>
+                                    </a>
                                 </BtnCustom>
                                 <BtnCustom classname="btn-more-pengumuman block ml-auto inter mt-6 px-8 py-3 rounded-[5px] text-green-base sm:hover:text-neutral-100 bg-white sm:hover:bg-green-base focus:text-neutral-100 focus:bg-green-base transition-colors duration-200">
                                     <NavLink to="#">
