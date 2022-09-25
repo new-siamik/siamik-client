@@ -68,6 +68,54 @@ export default function Navbar() {
 
     }
 
+    React.useEffect( () => {
+        function navActive() {
+            window.addEventListener("scroll", () => {
+                const div1 = document.getElementById('pengumuman')
+                const div2 = document.getElementById('other_service')
+                const div3 = document.getElementById('manual_panduan')
+                const div4 = document.getElementById('alur')
+    
+                const target1 = document.querySelector('#nav_links_item>li:first-child>span')
+                const target2 = document.querySelector('#nav_links_item>li:nth-child(2)>span')
+                const target3 = document.querySelector('#nav_links_item>li:nth-child(3)>span')
+                const target4 = document.querySelector('#nav_links_item>li:nth-child(4)>span')
+                
+                let offset = window.pageYOffset+200
+    
+                if (div1.offsetTop <= offset && div2.offsetTop > offset) {
+                    target1.classList.add("nav-active")
+                    target2.classList.remove("nav-active")
+                    target3.classList.remove("nav-active")
+                    target4.classList.remove("nav-active")
+                } else if (div2.offsetTop <= offset && div3.offsetTop > offset) {
+                    target2.classList.add("nav-active")
+                    target1.classList.remove("nav-active")
+                    target3.classList.remove("nav-active")
+                    target4.classList.remove("nav-active")
+                } else if (div3.offsetTop <= offset && div4.offsetTop > offset) {
+                    target3.classList.add("nav-active")
+                    target1.classList.remove("nav-active")
+                    target2.classList.remove("nav-active")
+                    target4.classList.remove("nav-active")
+                } else if (div4.offsetTop <= offset) {
+                    target4.classList.add("nav-active")
+                    target1.classList.remove("nav-active")
+                    target2.classList.remove("nav-active")
+                    target3.classList.remove("nav-active")
+                } else {      
+                    target1.classList.remove("nav-active")
+                    target2.classList.remove("nav-active")
+                    target3.classList.remove("nav-active")
+                    target4.classList.remove("nav-active")
+                }
+            })            
+        }
+
+        navActive()
+        // disable-next-line
+    }, [])
+
     return (
         <header>
             <nav id="navbar_component">   
