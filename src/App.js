@@ -8,9 +8,6 @@ import ScrollPage from "./components/ScrollPage";
 /* import AdminSignin from "./pages/admin/auth/AdminSignin"
 import AdminDash from "./pages/admin/dashboard/AdminDash"
 import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
- */
-// import Signin from "./pages/auth/Signin";
-// import Signup from "./pages/auth/Signup";
 
 /* Student */
 /* import Mydash from "./pages/dashboard/Mydash";
@@ -23,7 +20,7 @@ export const AuthContext = createContext();
 const initialState = {
   isAuthenticated: false,
   id: null,
-  email: null,
+  npm: null,
   token: null,
 };
 
@@ -31,13 +28,13 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "LOGIN":
       localStorage.setItem("id", action.payload.id);
-      localStorage.setItem("email", action.payload.email);
+      localStorage.setItem("npm", action.payload.npm);
       localStorage.setItem("token", action.payload.token);
       return {
         ...state,
         isAuthenticated: true,
         id: action.payload.id,
-        email: action.payload.email,
+        npm: action.payload.npm,
         token: action.payload.token,
       };
     case "LOGOUT":
@@ -45,7 +42,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: false,
-        email: null,
+        npm: null,
         id: null,
         token: null,
         role: null,

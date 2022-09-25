@@ -150,14 +150,28 @@ header {
             @media only screen and (max-width: 919px) {
               margin-right: 0;
             }
-
             &:last-child {
               margin-right: 0;
-               a {
-                  > button {
-                    @include transition(all, .2s); 
-                  }                
-               }
+              .form-group {
+                div {
+                   .button-login {
+                     @include transition(background-color, .2s);                
+                   }
+                   
+                   .btn-form-submit {
+                     @include transition(background-color, .2s);                
+                   }
+                }
+                @media only screen and (max-width: 920px) {
+                  top: 4.5rem;
+                  align-items: start;
+                }
+                form {
+                  @media only screen and (max-width: 640px) {
+                    width: 90vw;
+                  }
+                }
+              }
             }
             > span {
               @include transition(all, .2s);

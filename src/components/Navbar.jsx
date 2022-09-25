@@ -3,22 +3,42 @@ import React from "react"
 // import axios from "../api/axios";
 // import AuthBtn from "./auth/AuthBtn";
 import { NavLink } from 'react-router-dom';
-// import { Dots } from 'loading-animations-react';
+import { EnvelopeIcon } from '@heroicons/react/24/solid'
+
+import "../styles/component/_navbar.scss";
 
 // import Image from "./Image";
-import "../styles/component/_navbar.scss";
 import { classes } from "../utils/Classes";
-import BtnCustom from "../components/button/BtnCustom"
+import BtnCustom from "./button/BtnCustom";
+import FormCard from "./auth/form/FormCard";
+import FormInput from "./auth/form/input/FormInput";
+import CardPrimary from "../components/card/CardPrimary";
+import PasswordField from "../components/auth/form/input/PasswordField"
 
 export default function Navbar() {
+
+    const [values, setValues] = React.useState({
+        npm: "",
+        password: "",
+    });
+
+    const inputs = [
+        {
+            key: 1,
+            type: "npm",
+            name: "npm",
+            id: "npm",
+            errorMessage: "Kolom NPM harus diisi dan benar!",
+            classname: "mt-7",
+            required: true,
+            placeholder: "NPM (Nomor Pokok Mahasiswa)"
+        }
+    ]
 
     const [isOpen, setIsOpen] = React.useState(false);
     const open = () => {
         setIsOpen(!isOpen);
     }
-    
-    // const [user, setUser] = React.useState([])
-    // const [loading, setLoading] = React.useState(true)
 
     const scrollPeng = () => {
         const scrollTo = document.getElementById('pengumuman').offsetTop
@@ -35,6 +55,17 @@ export default function Navbar() {
     const scrollAlur = () => {
         const scrollTo = document.getElementById('alur').offsetTop
         window.scrollTo({ top: scrollTo-120, behavior: 'smooth'});
+    }
+
+    const onChange = (e) => {
+        setValues({
+            ...values,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSubmit = () => {
+
     }
 
     return (
@@ -105,15 +136,52 @@ export default function Navbar() {
                             </NavLink> */}
                         </li>
                         <li>
-                            <NavLink to="/signin"
-                                className={({ isActive }) =>
-                                    isActive ? 'nav-active' : ''
-                                }
+                            <FormCard 
+                                classButton = {`button-login bg-white focus:outline-none hover:bg-yellow-base ui-open:bg-yellow-base  ui-open:ring-2 ui-open:ring-neutral-200 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]`}
+                                classOverlay = {`fixed inset-0 bg-neutral-900 opacity-40`}
+                                classPanel = {`form-group fixed top-6 right-0 z-10 flex items-center justify-center overflow-y-auto overflow-x-hidden w-full h-full invisible`}
                             >
-                                <BtnCustom classname="bg-white hover:bg-yellow-500 hover:text-neutral-100 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]">
-                                    Login
-                                </BtnCustom>
-                            </NavLink>
+                                <div className="visible relative z-20">
+                                    <CardPrimary>
+                                        <form method="POST"
+                                            className="relative bg-white p-10 w-[620px] h-[500px] rounded-b-[8px] overflow-y-scroll"
+                                            onSubmit={handleSubmit}
+                                            encType="multipart/form-data"
+                                        >
+                                            <div id="form-content">
+                                                <div className="flex justify-center img-form mb-5">
+                                                    <img src="/assets/image/login.svg" width={82} height={82} alt="Icon Login" />
+                                                </div>
+                                                <h2 className="form-title inter text-[20px] font-bold text-neutral-900 hover:text-neutral-900 ">Masuk Ke SIAMIK</h2>
+                                                <div className="flex flex-col items-center justify-center">
+                                                    {inputs.map((input) => (
+                                                        input.name === "npm" ?
+                                                            <FormInput
+                                                                key={input.key}
+                                                                {...input}
+                                                                value={values[input.name]}
+                                                                onChange={onChange}
+                                                            >
+                                                                <EnvelopeIcon className="w-5 h-5 text-green-base" aria-hidden="true" />
+                                                            </FormInput>
+                                                        : false
+                                                    ))}
+                                                    <PasswordField 
+                                                        required="required"
+                                                        onChange={onChange}
+                                                    />
+                                                </div>
+                                                <div className="w-full inter text-right mt-6 font-semibold cursor-pointer text-green-base sm:hover:underline sm:hover:underline-offset-4">
+                                                    <h3>Lupa Kata Sandi ?</h3>
+                                                </div>
+                                                <BtnCustom type="submit" classname="btn-form-submit w-full btn-pengumuman inter mt-10 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
+                                                    Masuk
+                                                </BtnCustom>
+                                            </div> 
+                                        </form>
+                                    </CardPrimary>
+                                </div>                                            
+                            </FormCard>
                         </li>
 
                         {/* {
