@@ -170,6 +170,10 @@ header {
                   @media only screen and (max-width: 640px) {
                     width: 90vw;
                   }
+                  @media only screen and (max-width: 480px) {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                  }
                 }
               }
             }
