@@ -1,19 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { UserIcon } from "@heroicons/react/24/solid";
 
-import "../../../styles/admin/auth/_adminsignin.scss";
+import "../../../styles/dosen/auth/_dosensignin.scss";
 
 import AdminDosen from "../../../layouts/AdminDosen";
 import BtnCustom from "../../../components/button/BtnCustom";
-import CardPrimary from "../../../components/card/CardPrimary";
 import FormInput from "../../../components/auth/form/input/FormInput";
 import PasswordField from "../../../components/auth/form/input/PasswordField";
 
 export default function AdminSignin() {
 
     const [values, setValues] = React.useState({
-        username: "",
+        nip: "",
         password: "",
     });
 
@@ -21,12 +19,12 @@ export default function AdminSignin() {
         {
             key: 1,
             type: "text",
-            name: "username",
-            id: "username",
-            errorMessage: "Nama harus memiliki minimal 3-50 karakter tanpa special character!",
+            name: "nip",
+            id: "nip",
+            errorMessage: "Kolom NIP/NPT harus diisi, Batas 6 - 15 Angka !",
             required: true,
-            pattern: "^[w a-zA-Z0-9]{3,50}$",
-            placeholder: "Username",
+            placeholder: "NIP/NPT",
+            pattern: "(s*(S)s*){6,15}"
         }
     ]
 
@@ -44,42 +42,39 @@ export default function AdminSignin() {
     
     return (
         <AdminDosen
-            title="Masuk - Admin Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
-            kw="admin password siamik, admin password new siamik, admin password siamik upn jatim, admin password siamik upn veteran jatim, admin password sistem informasi akademik upn 'veteran' jatim"
-            desc="Halaman Signin - Admin UPN 'Veteran' Jawa Timur"
+            title="Masuk - Dosen Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
+            kw="dosen password siamik, dosen password new siamik, dosen password siamik upn jatim, dosen password siamik upn veteran jatim, dosen password sistem informasi akademik upn 'veteran' jatim"
+            desc="Halaman Signin - Dosen UPN 'Veteran' Jawa Timur"
             ogUrl={""}
             ogType={""}
             ogTitle={""}
             ogDesc={""}
             twitTitle={""}
         >
-            <main className="adminsignin-component">
-                <div id="container_adminsignin" className="bg-cover bg-no-repeat h-screen space-y-9 sm:space-y-14" style={{backgroundImage: `url(/assets/image/background-siamik.svg)`}}>
-                    <div id="brand">
-                        <NavLink to="/">
-                            <img src="/assets/image/upn-logo.svg" width={50} alt="logo" />
-                            <h1 className="inter font-bold">
-                                UPN "Veteran" Jawa Timur
-                            </h1>
-                        </NavLink>        
+            <main className="dosensignin-component">
+                <div id="container_dosensignin" className="grid grid-cols-1 sm:grid-cols-2 h-screen">
+                    <div id="image_dosen_signin" className="bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(/assets/image/background-siamik.svg)`}}>       
                     </div>
-                    <CardPrimary>
+                    <div className="flex flex-col items-center justify-center sm:px-8 md:px-12 lg:px-20">
                         <form method="POST"
-                            className="bg-white p-10 w-[552px] rounded-b-[8px] overflow-y-scroll"
+                            className="bg-white"
                             onSubmit={handleSubmit}
                             encType="multipart/form-data"
                         >
                             <div id="form-content">
-                                <div className="flex flex-col items-center justify-center img-form  space-y-5 mb-6">
-                                    <img src="/assets/image/Login.svg" width={82} height={82} alt="Icon Login" />
-                                    <h2 className="form-title inter text-center text-[20px] font-bold text-neutral-900 hover:text-neutral-900 ">
-                                        Masuk Sebagai Admin 
-                                    </h2>
+                                <div className="img-form space-y-5 mb-6">
+                                    <img src="/assets/image/upn-logo.svg" width={80} alt="logo UPN Veteran Jatim" />
+                                    <h1 className="form-title lato text-[20px] font-semibold text-neutral-900 hover:text-neutral-900 ">
+                                        Masuk Ke SIDOS 
+                                    </h1>
+                                    <p className="form-title inter font-normal hover:text-neutral-900 ">
+                                        SIDOS adalah sistem informasi yang dipergunakan untuk Dosen dilingkungan UPN Veteran Jawa Timur, meliputi Perwalian Mahsiswa, Pengisian Beban Kerja Dosen, Lihat Presensi, Absensi Kuliah 
+                                    </p>
                                 </div>
                                 <div className="flex flex-col items-center justify-center inter space-y-6">
                                     {
                                         inputs.map(input => (
-                                        input.name === "username" ?
+                                        input.name === "nip" ?
                                             <FormInput
                                                 key={input.key}
                                                 {...input}
@@ -105,8 +100,7 @@ export default function AdminSignin() {
                                 </BtnCustom>
                             </div> 
                         </form>
-                    </CardPrimary>
-
+                    </div>
                 </div>
             </main>
         </AdminDosen>

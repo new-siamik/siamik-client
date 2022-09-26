@@ -8,6 +8,9 @@ import ScrollPage from "./components/ScrollPage";
 
 /* Admin */
 import AdminSignin from "./pages/admin/auth/AdminSignin"
+
+/* Dosen */
+import DosenSignin from "./pages/dosen/auth/DosenSignin"
 // import AdminDash from "./pages/admin/dashboard/AdminDash"
 // import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
 
@@ -73,6 +76,9 @@ export default function App() {
           <Route path="/admin/signin" element={<AdminSignin />} />
           {/* <Route path="/admin/dashboard" element={<AdminDash />} />
           <Route path="/admin/mentor/create" element={<AdminCreateMentor />} /> */}
+
+          {/* Dosen */}
+          <Route path="/sidos" element={<DosenSignin />} />
 
           <Route path="/" element={<Home />} />
           <Route path="/" element={<Pengumuman />} />
