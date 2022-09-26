@@ -44,7 +44,7 @@ export default function ResetPass() {
     
     return (
         <Admin
-        title="Signin — Admin Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
+        title="Masuk - Admin Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
         kw="admin password siamik, admin password new siamik, admin password siamik upn jatim, admin password siamik upn veteran jatim, admin password sistem informasi akademik upn 'veteran' jatim"
         desc="Halaman Signin - Admin UPN 'Veteran' Jawa Timur"
         ogUrl={""}
