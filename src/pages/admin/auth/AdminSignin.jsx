@@ -23,7 +23,7 @@ export default function ResetPass() {
             type: "text",
             name: "username",
             id: "username",
-            errorMessage: "Nama harus memiliki minimal 3-20 karakter tanpa special character!",
+            errorMessage: "Nama harus memiliki minimal 3-50 karakter tanpa special character!",
             required: true,
             pattern: "^[w a-zA-Z0-9]{3,50}$",
             placeholder: "Username",
