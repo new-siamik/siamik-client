@@ -27,12 +27,12 @@ export default function Navbar() {
     const inputs = [
         {
             key: 1,
-            type: "npm",
+            type: "text",
             name: "npm",
             id: "npm",
-            errorMessage: "Kolom NPM harus diisi dan benar!",
-            classname: "mt-7",
+            errorMessage: "Kolom NPM harus diisi, Batas 6 - 15 Angka !",
             required: true,
+            pattern: "(s*(S)s*){6,15}",
             placeholder: "NPM (Nomor Pokok Mahasiswa)"
         }
     ]
@@ -223,7 +223,7 @@ export default function Navbar() {
                                                     <img src="/assets/image/login.svg" width={82} height={82} alt="Icon Login" />
                                                 </div>
                                                 <h2 className="form-title inter text-[20px] font-bold text-neutral-900 hover:text-neutral-900 ">Masuk Ke SIAMIK</h2>
-                                                <div className="flex flex-col items-center justify-center space-y-6">
+                                                <div className="flex flex-col items-center justify-center mt-6 space-y-6">
                                                     {inputs.map((input) => (
                                                         input.name === "npm" ?
                                                             <FormInput

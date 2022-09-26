@@ -1,8 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import BtnToTop from "../components/button/BtnToTop";
 
 export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDesc, twitTitle, children}) {
@@ -27,9 +25,7 @@ export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDes
 
             </Helmet>
             
-            <Navbar />
             {children}
-            <Footer />
 
             <BtnToTop />
 

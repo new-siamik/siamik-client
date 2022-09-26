@@ -7,9 +7,9 @@ import Pengumuman from "./pages/Pengumuman"
 import ScrollPage from "./components/ScrollPage";
 
 /* Admin */
-/* import AdminSignin from "./pages/admin/auth/AdminSignin"
-import AdminDash from "./pages/admin/dashboard/AdminDash"
-import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
+import AdminSignin from "./pages/admin/auth/AdminSignin"
+// import AdminDash from "./pages/admin/dashboard/AdminDash"
+// import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
 
 /* Student */
 /* import Mydash from "./pages/dashboard/Mydash";
@@ -70,8 +70,8 @@ export default function App() {
           <Route path="/question/:id" element={<Forum />} /> */}
 
           {/* Admin */}
-          {/* <Route path="/admin/signin" element={<AdminSignin />} />
-          <Route path="/admin/dashboard" element={<AdminDash />} />
+          <Route path="/admin/signin" element={<AdminSignin />} />
+          {/* <Route path="/admin/dashboard" element={<AdminDash />} />
           <Route path="/admin/mentor/create" element={<AdminCreateMentor />} /> */}
 
           <Route path="/" element={<Home />} />

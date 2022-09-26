@@ -18,12 +18,13 @@ export default function ForgotPass() {
     const inputs = [
         {
             key: 1,
-            type: "npm",
+            type: "text",
             name: "npm",
             id: "npm",
-            errorMessage: "Kolom NPM harus diisi dan valid!",
+            errorMessage: "Kolom NPM harus diisi, Batas 6 - 15 Angka !",
             required: true,
-            placeholder: "NPM (Nomor Pokok Mahasiswa)"
+            placeholder: "NPM (Nomor Pokok Mahasiswa)",
+            pattern: "(s*(S)s*){6,15}"
         },
         {
             key: 2,
@@ -59,7 +60,7 @@ export default function ForgotPass() {
     
     return (
         <Siamik
-        title="Lupa Password - Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
+        title="Lupa Password — Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
         kw="lupa password siamik, lupa password new siamik,lupa password  siamik upn jatim, lupa password siamik upn veteran jatim, lupa password sistem informasi akademik upn 'veteran' jatim"
         desc="Fitur Lupa Password yang memudahkan mahasiswa untuk mengganti kata sandi yang lama dengan kata sandi yang baru"
         ogUrl={""}

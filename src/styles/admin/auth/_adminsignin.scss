@@ -1,0 +1,50 @@
+@import "../../base/_variable.scss";
+
+.adminsignin-component {
+    #container_adminsignin {
+        padding: 4rem;
+        @include flex-center;
+        flex-direction: column;
+        justify-content: center;
+
+        @media only screen and (max-width: 640px) {
+            padding: 0 1.5rem;
+        }
+
+        #brand {
+            > a {
+              @include flex-center;
+              h1 {
+                font-weight: 600;
+                font-size: 1rem;
+                margin-left: 1rem;
+                color: $neutral-4;
+                @include transition(all, .2s);
+
+                @media only screen and (max-width: 411px) {
+                    margin-left: 0;
+                }
+              }
+
+              @media only screen and (max-width: 411px) {
+                gap: 1rem;
+                flex-direction: column;
+              }
+    
+              &:hover > h1 {
+                color: $second-color;
+              }
+            }
+        }
+
+        form {
+            @media only screen and (max-width: 640px) {
+                width: 90vw;
+            }
+            @media only screen and (max-width: 480px) {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
