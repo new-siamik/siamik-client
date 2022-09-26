@@ -26,7 +26,7 @@ export default function ResetPass() {
     
     return (
         <Siamik
-        title="Reset password - Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
+        title="Reset Password - Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
         kw="reset password siamik, reset password new siamik, reset password siamik upn jatim, reset password siamik upn veteran jatim, reset password sistem informasi akademik upn 'veteran' jatim"
         desc="Fitur Reset Password yang memudahkan mahasiswa untuk mengganti kata sandi yang lama dengan kata sandi yang baru"
         ogUrl={""}
