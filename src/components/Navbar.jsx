@@ -32,7 +32,7 @@ export default function Navbar() {
             id: "npm",
             errorMessage: "Kolom NPM harus diisi, Batas 6 - 15 Angka !",
             required: true,
-            pattern: "(s*(S)s*){6,15}",
+            pattern: "^[0-9]{6,15}$",
             placeholder: "NPM (Nomor Pokok Mahasiswa)"
         }
     ]
