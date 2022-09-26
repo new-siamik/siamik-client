@@ -1,0 +1,50 @@
+@import "../base/_variable.scss";
+
+footer {
+    background-color: $green-base;
+    section {
+        padding: 4rem;
+        @media only screen and (max-width: 639px) {
+            padding: 2rem 1.5rem !important;
+        }
+
+        > #info_siamik {
+            .box-item-info {
+                .title-info-footer {
+                    @include text-head($neutral-4, 20px, 600)
+                }
+                h2 {
+                    @include text-head($neutral-4, 20px, 500)
+                }
+                > h3 {
+                    @include text-head($neutral-3, 1rem, 400)
+                }
+    
+                > ul {
+                    > li {
+                        @include text-head($neutral-3, 1rem, 500);
+                        > a {
+                            @include transition(color, .2s);
+                            @media only screen and (min-width: 640px) {
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+                            &:active {color: white;}
+                        }
+                    }
+                }
+            }
+        }
+
+        > #copyright_sosmed {
+            @media only screen and (max-width: 320px) {
+                .box-copright-sosmed {
+                    row-gap: 1rem;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+}

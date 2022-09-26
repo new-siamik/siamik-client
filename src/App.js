@@ -14,6 +14,7 @@ import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
 import Profile from "./pages/dashboard/Profile";
  */
 import NotFound from "./pages/NotFound";
+import ForgotPass from "./pages/auth/ForgotPass";
 
 export const AuthContext = createContext();
 
@@ -45,7 +46,6 @@ const reducer = (state, action) => {
         npm: null,
         id: null,
         token: null,
-        role: null,
       }
     default:
       return state;
@@ -59,8 +59,7 @@ export default function App() {
     <AuthContext.Provider value={{ state, dispatch }}>
       <ScrollPage>
         <Routes>
-          {/* <Route path="/signin" element={<Signin />} />
-          <Route path="/signup" element={<Signup />} /> */}
+          <Route path="/forgot-password" element={<ForgotPass />} />
           
           {/* Student */}
           {/* <Route path="/dashboard/my" element={<Mydash />} />

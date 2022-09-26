@@ -1,20 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-// import { useLocation } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 import BtnToTop from "../components/button/BtnToTop";
 
 export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDesc, twitTitle, children}) {
-
-    // const location = useLocation();
-    // function getFooter() {
-    //     let dsb = "dashboard"
-    //     let mentor = "mentor"
-    //     if(location.pathname === `/${dsb}/my` || location.pathname === `/${dsb}/profile` || location.pathname === `/${dsb}/questions` || location.pathname === `/question/create` || location.pathname === `/${mentor}/dashboard` || location.pathname === `/${mentor}/profile` || location.pathname === `/${mentor}/questions`) return
-    //     return <Footer />
-    // }
 
     return (
         <React.Fragment>
@@ -42,7 +33,7 @@ export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDes
             
             <Navbar />
             {children}
-            {/* {getFooter()} */}
+            <Footer />
 
             <BtnToTop />
 

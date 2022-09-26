@@ -13,7 +13,7 @@ export default function FormInput(props) {
     }
 
     return (
-        <div className={` ${classname} form-control w-full mb-5 relative`}> 
+        <div className={` ${classname} form-control w-full relative`}> 
             {/* {curData && 
             <h3>{curData}</h3>} */}
             <div className="flex absolute top-3 left-0 items-center pl-3 pointer-events-none">

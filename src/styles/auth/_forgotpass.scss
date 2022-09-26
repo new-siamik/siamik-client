@@ -1,0 +1,19 @@
+@import "../base/_variable.scss";
+
+.forgotpass-component {
+    #container_forgotpass {
+        padding: 4rem;
+        @include flex-center;
+        justify-content: center;
+
+        form {
+            @media only screen and (max-width: 640px) {
+                width: 90vw;
+            }
+            @media only screen and (max-width: 480px) {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+}

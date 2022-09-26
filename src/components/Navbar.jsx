@@ -2,8 +2,8 @@ import React from "react"
 // import Swal from "sweetalert2"
 // import axios from "../api/axios";
 // import AuthBtn from "./auth/AuthBtn";
-import { NavLink } from 'react-router-dom';
-import { EnvelopeIcon } from '@heroicons/react/24/solid'
+import { NavLink, useLocation } from 'react-router-dom';
+import { UserIcon } from '@heroicons/react/24/solid'
 
 import "../styles/component/_navbar.scss";
 
@@ -16,6 +16,8 @@ import CardPrimary from "../components/card/CardPrimary";
 import PasswordField from "../components/auth/form/input/PasswordField"
 
 export default function Navbar() {
+
+    const locPath = useLocation()
 
     const [values, setValues] = React.useState({
         npm: "",
@@ -75,6 +77,7 @@ export default function Navbar() {
                 const div2 = document.getElementById('other_service')
                 const div3 = document.getElementById('manual_panduan')
                 const div4 = document.getElementById('alur')
+                const div5 = document.getElementById('versi_aplikasi')
     
                 const target1 = document.querySelector('#nav_links_item>li:first-child>span')
                 const target2 = document.querySelector('#nav_links_item>li:nth-child(2)>span')
@@ -98,7 +101,7 @@ export default function Navbar() {
                     target1.classList.remove("nav-active")
                     target2.classList.remove("nav-active")
                     target4.classList.remove("nav-active")
-                } else if (div4.offsetTop <= offset) {
+                } else if (div4.offsetTop <= offset && div5.offsetTop > offset) {
                     target4.classList.add("nav-active")
                     target1.classList.remove("nav-active")
                     target2.classList.remove("nav-active")
@@ -112,8 +115,10 @@ export default function Navbar() {
             })            
         }
 
-        navActive()
-        // disable-next-line
+        if(locPath.pathname === "/forgot-password") return
+        return navActive()
+
+        // eslint-disable-next-line
     }, [])
 
     return (
@@ -139,50 +144,63 @@ export default function Navbar() {
 
                 <div id="nav_links">
                     <ul id="nav_links_item" className="inter">
-                        <li>
-                            <span onClick={scrollPeng}>
-                                Pengumuman
-                            </span>
-                            {/* <NavLink
-                                className={({ isActive }) =>
-                                    isActive ? 'nav-active' : ''
-                                } to="/">
-                                Pengumuman
-                            </NavLink> */}
-                        </li>
-                        <li>
-                            <span onClick={scrollLay}>
-                                Layanan Lainnya
-                            </span>
-                            {/* <NavLink 
-                                className={({ isActive }) =>
-                                        isActive ? 'nav-active' : ''
-                                } to="/layanan">
-                                Layanan Lainnya
-                            </NavLink> */}
-                        </li>
-                        <li>
-                            <span onClick={scrollMan}>
-                                Manual/Panduan
-                            </span>
-                            {/* <NavLink to="/panduan"
-                                className={({ isActive }) =>
-                                    isActive ? 'nav-active' : ''
-                                }>
-                                Manual/Panduan
-                            </NavLink> */}
-                        </li>
-                        <li>
-                            <span onClick={scrollAlur}>
-                                Alur
-                            </span>
-                            {/* <NavLink to="/alur"
-                                className={({ isActive }) =>
-                                    isActive ? 'nav-active' : ''
-                                }>
-                                Alur
-                            </NavLink> */}
-                        </li>
+                        {
+                            locPath.pathname === '/forgot-password' ? 
+                                <li>
+                                    <BtnCustom classname="button-beranda bg-white focus:outline-none hover:bg-yellow-base text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]">
+                                        <NavLink to="/">
+                                            Beranda
+                                        </NavLink>
+                                    </BtnCustom>
+                                </li>
+                            :
+                                <React.Fragment>
+                                    <li>
+                                        <span onClick={scrollPeng}>
+                                            Pengumuman
+                                        </span>
+                                        {/* <NavLink
+                                            className={({ isActive }) =>
+                                                isActive ? 'nav-active' : ''
+                                            } to="/">
+                                            Pengumuman
+                                        </NavLink> */}
+                                    </li>
+                                    <li>
+                                        <span onClick={scrollLay}>
+                                            Layanan Lainnya
+                                        </span>
+                                        {/* <NavLink 
+                                            className={({ isActive }) =>
+                                                    isActive ? 'nav-active' : ''
+                                            } to="/layanan">
+                                            Layanan Lainnya
+                                        </NavLink> */}
+                                    </li>
+                                    <li>
+                                        <span onClick={scrollMan}>
+                                            Manual/Panduan
+                                        </span>
+                                        {/* <NavLink to="/panduan"
+                                            className={({ isActive }) =>
+                                                isActive ? 'nav-active' : ''
+                                            }>
+                                            Manual/Panduan
+                                        </NavLink> */}
+                                    </li>
+                                    <li>
+                                        <span onClick={scrollAlur}>
+                                            Alur
+                                        </span>
+                                        {/* <NavLink to="/alur"
+                                            className={({ isActive }) =>
+                                                isActive ? 'nav-active' : ''
+                                            }>
+                                            Alur
+                                        </NavLink> */}
+                                    </li>                                    
+                                </React.Fragment>
+                        }
                         <li>
                             <FormCard 
                                 classButton = {`button-login bg-white focus:outline-none hover:bg-yellow-base ui-open:bg-yellow-base  ui-open:ring-2 ui-open:ring-neutral-200 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]`}
@@ -201,7 +219,7 @@ export default function Navbar() {
                                                     <img src="/assets/image/login.svg" width={82} height={82} alt="Icon Login" />
                                                 </div>
                                                 <h2 className="form-title inter text-[20px] font-bold text-neutral-900 hover:text-neutral-900 ">Masuk Ke SIAMIK</h2>
-                                                <div className="flex flex-col items-center justify-center">
+                                                <div className="flex flex-col items-center justify-center space-y-6">
                                                     {inputs.map((input) => (
                                                         input.name === "npm" ?
                                                             <FormInput
@@ -210,7 +228,7 @@ export default function Navbar() {
                                                                 value={values[input.name]}
                                                                 onChange={onChange}
                                                             >
-                                                                <EnvelopeIcon className="w-5 h-5 text-green-base" aria-hidden="true" />
+                                                                <UserIcon className="w-5 h-5 text-green-base" aria-hidden="true" />
                                                             </FormInput>
                                                         : false
                                                     ))}
@@ -220,7 +238,11 @@ export default function Navbar() {
                                                     />
                                                 </div>
                                                 <div className="w-full inter text-right mt-6 font-semibold cursor-pointer text-green-base sm:hover:underline sm:hover:underline-offset-4">
-                                                    <h3>Lupa Kata Sandi ?</h3>
+                                                    <h3>
+                                                        <NavLink to="/forgot-password">
+                                                            Lupa Kata Sandi ?
+                                                        </NavLink>
+                                                    </h3>
                                                 </div>
                                                 <BtnCustom type="submit" classname="btn-form-submit w-full btn-pengumuman inter mt-10 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
                                                     Masuk
