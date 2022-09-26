@@ -7,7 +7,7 @@ import "../../../../styles/component/auth/form/input/_forminput.scss";
 
 export default function PasswordField(props) {
 
-    const { defValue, classInput, classname, onChange, required} = props;
+    const { name, id, placeholder, pattern, errorMessage, defValue, classInput, classname, onChange, required} = props;
     
     const [focus, setFocus] = useState(false);
     const handleFocus = (e) => {
@@ -36,20 +36,20 @@ export default function PasswordField(props) {
                     <LockClosedIcon className="w-5 h-5 text-green-base" aria-hidden="true"/>
             </div> 
             <input 
-                id="password"
-                name="password"
+                id={id}
+                name={name}
                 type={passwordType}
                 required={required}
-                pattern="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*_])[a-zA-Z0-9!@#$%^&*_]{8,25}$"
+                pattern={pattern}
                 className={`${classInput} form-input inter w-full rounded-[0.5rem] pl-10 pr-10 block p-2.5 border border-gray-200 border-solid rouded-[1rem] focus:outline-none placeholder:text-neutral-400`} 
                 onChange={onChange} 
                 onBlur={handleFocus} 
                 focus={focus.toString()}
                 defaultValue={defValue}
-                placeholder="Kata Sandi"
+                placeholder={placeholder}
                 />
             <h4 className="error-message text-red-500 text-[0.85rem] font-normal mt-3">
-                Minimal 8-25 karakter, 1 huruf, 1 angka, dan 1 special character!
+                {errorMessage}
             </h4>
         </div>
     )

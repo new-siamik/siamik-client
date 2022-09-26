@@ -1,5 +1,5 @@
-import React, { useReducer, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
+import React, { useReducer, createContext } from "react";
 
 import Home from "./pages/Home";
 import ScrollPage from "./components/ScrollPage";
@@ -14,6 +14,7 @@ import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
 import Profile from "./pages/dashboard/Profile";
  */
 import NotFound from "./pages/NotFound";
+import ResetPass from "./pages/auth/ResetPass";
 import ForgotPass from "./pages/auth/ForgotPass";
 
 export const AuthContext = createContext();
@@ -60,6 +61,7 @@ export default function App() {
       <ScrollPage>
         <Routes>
           <Route path="/forgot-password" element={<ForgotPass />} />
+          <Route path="/reset-password" element={<ResetPass />} />
           
           {/* Student */}
           {/* <Route path="/dashboard/my" element={<Mydash />} />

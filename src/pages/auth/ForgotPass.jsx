@@ -11,7 +11,8 @@ export default function ForgotPass() {
 
     const [values, setValues] = React.useState({
         npm: "",
-        password: "",
+        birthday: "",
+        telp: "",
     });
 
     const inputs = [
@@ -58,9 +59,9 @@ export default function ForgotPass() {
     
     return (
         <Siamik
-        title="SIAMIK - Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
-        kw="siamik, new siamik, siamik upn jatim, siamik upn veteran jatim, sistem informasi akademik upn 'veteran' jatim"
-        desc="'SIAMIK (Sistem Informasi Akademik) 2022 - Adalah suatu sistem informasi utk mengelola KRS, MBKM, Presensi, KHS, Transkrip dalam penyelengaraan pendidikan di lingkungan UPN 'Veteran' Jatim."
+        title="Lupa Password - Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
+        kw="lupa password siamik, lupa password new siamik,lupa password  siamik upn jatim, lupa password siamik upn veteran jatim, lupa password sistem informasi akademik upn 'veteran' jatim"
+        desc="Fitur Lupa Password yang memudahkan mahasiswa untuk mengganti kata sandi yang lama dengan kata sandi yang baru"
         ogUrl={""}
         ogType={""}
         ogTitle={""}

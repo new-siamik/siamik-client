@@ -59,6 +59,10 @@ export default function Navbar() {
         window.scrollTo({ top: scrollTo-120, behavior: 'smooth'});
     }
 
+    const validatePath = (path) => {
+        return locPath.pathname === path
+    }
+
     const onChange = (e) => {
         setValues({
             ...values,
@@ -145,7 +149,7 @@ export default function Navbar() {
                 <div id="nav_links">
                     <ul id="nav_links_item" className="inter">
                         {
-                            locPath.pathname === '/forgot-password' ? 
+                            validatePath("/forgot-password") ||  validatePath("/reset-password") ? 
                                 <li>
                                     <BtnCustom classname="button-beranda bg-white focus:outline-none hover:bg-yellow-base text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]">
                                         <NavLink to="/">
@@ -233,8 +237,13 @@ export default function Navbar() {
                                                         : false
                                                     ))}
                                                     <PasswordField 
+                                                        id="password"
+                                                        name="password"
                                                         required="required"
                                                         onChange={onChange}
+                                                        placeholder="Kata Sandi"
+                                                        pattern="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*_])[a-zA-Z0-9!@#$%^&*_]{8,25}$"
+                                                        errorMessage="Minimal 8-25 karakter. 1 huruf, 1 angka, dan 1 special character!"
                                                     />
                                                 </div>
                                                 <div className="w-full inter text-right mt-6 font-semibold cursor-pointer text-green-base sm:hover:underline sm:hover:underline-offset-4">
