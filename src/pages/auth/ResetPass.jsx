@@ -71,7 +71,7 @@ export default function ResetPass() {
                                     />
                                 </div>
                                 <BtnCustom type="submit" classname="btn-form-submit w-full btn-pengumuman inter mt-10 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
-                                    Masuk
+                                    Perbaharui
                                 </BtnCustom>
                             </div> 
                         </form>
