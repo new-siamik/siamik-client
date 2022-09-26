@@ -27,7 +27,7 @@ export default function Home() {
         >
             <main className="home-component">
                 <div id="container_home">
-                    <article id="welcome_msg" className="overflow-x-hidden text-center p-16 h-[555px]" style={{backgroundImage: `url(/assets/image/background-siamik.svg)`}}>
+                    <article id="welcome_msg" className="bg-cover bg-no-repeat overflow-x-hidden text-center p-16 h-[555px]" style={{backgroundImage: `url(/assets/image/background-siamik.svg)`}}>
                         <section className="group-image mb-7">
                             <img src="/assets/image/group-image.svg" width={202} height={58} alt="Group Logo" />
                         </section>
