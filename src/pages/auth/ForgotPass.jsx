@@ -24,7 +24,7 @@ export default function ForgotPass() {
             errorMessage: "Kolom NPM harus diisi, Batas 6 - 15 Angka !",
             required: true,
             placeholder: "NPM (Nomor Pokok Mahasiswa)",
-            pattern: "(s*(S)s*){6,15}"
+            pattern: "^[0-9]{6,15}$"
         },
         {
             key: 2,
@@ -33,7 +33,7 @@ export default function ForgotPass() {
             id: "birthday",
             errorMessage: "Kolom birthday harus diisi dan sesuai dengan KTP!",
             required: true,
-            placeholder: "Nomor Whatsapp"
+            placeholder: "Tanggal Lahir"
         },
         {
             key: 3,
