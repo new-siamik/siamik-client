@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import React, { useReducer, createContext } from "react";
 
 import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Pengumuman from "./pages/Pengumuman"
 import ScrollPage from "./components/ScrollPage";
 
 /* Admin */
@@ -13,7 +15,6 @@ import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
 /* import Mydash from "./pages/dashboard/Mydash";
 import Profile from "./pages/dashboard/Profile";
  */
-import NotFound from "./pages/NotFound";
 import ResetPass from "./pages/auth/ResetPass";
 import ForgotPass from "./pages/auth/ForgotPass";
 
@@ -74,6 +75,7 @@ export default function App() {
           <Route path="/admin/mentor/create" element={<AdminCreateMentor />} /> */}
 
           <Route path="/" element={<Home />} />
+          <Route path="/" element={<Pengumuman />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ScrollPage>
