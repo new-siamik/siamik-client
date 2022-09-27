@@ -24,7 +24,6 @@ export default function AdminSignin() {
             errorMessage: "Kolom NIP/NPT harus diisi, Batas 6 - 15 Angka !",
             required: true,
             placeholder: "NIP/NPT",
-            pattern: "(s*(S)s*){6,15}"
         }
     ]
 

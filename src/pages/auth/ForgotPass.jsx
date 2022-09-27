@@ -11,7 +11,7 @@ export default function ForgotPass() {
 
     const [values, setValues] = React.useState({
         npm: "",
-        birthday: "",
+        tanggalLahir: "",
         telp: "",
     });
 
@@ -29,8 +29,8 @@ export default function ForgotPass() {
         {
             key: 2,
             type: "date",
-            name: "birthday",
-            id: "birthday",
+            name: "tanggalLahir",
+            id: "tanggalLahir",
             errorMessage: "Kolom birthday harus diisi dan sesuai dengan KTP!",
             required: true,
             placeholder: "Tanggal Lahir"
@@ -38,8 +38,8 @@ export default function ForgotPass() {
         {
             key: 3,
             type: "telp",
-            name: "telp",
-            id: "telp",
+            name: "phone",
+            id: "phone",
             errorMessage: "Min 10 digit angka. Format: 0899-9564-873; 08999564873; +62899-9564-873; +62 899-9564-873; +62 8999564873; +62 899 9564873; +628999564873;",
             required: true,
             placeholder: "Nomor Whatsapp",
