@@ -1,0 +1,64 @@
+@import "../../base/_variable.scss";
+
+.mydash-component {
+    #container_mydash {
+        #headline_msg {
+            .text-headline {
+                > h1 {
+                    @include text-head($neutral-4, 36px, 700);
+
+                    @media only screen and (max-width: 540px) {
+                        font-size: 9vw;
+                    }
+                }
+            }
+        }
+        #data_content {
+            #data_profile {
+                .card-custom {
+                    @media only screen and (max-width: 480px) {
+                        flex-direction: column;
+                    }
+                    #profile_text {
+                        @media only screen and (max-width: 480px) {
+                            order: 2;
+                            flex-direction: row;
+                        }    
+                    }
+                    #profile_image {
+                        @media only screen and (max-width: 480px) {
+                            order: 1;
+                            margin-bottom: 1.25rem;
+                        }    
+
+                        img {
+                            @media only screen and (max-width: 480px) {
+                                margin: auto auto;
+                            }
+                        }
+                    }
+                }
+            }
+            .box-data-content {
+                .card-custom {
+                    @media only screen and (max-width: 480px) {
+                        flex-direction: column;
+                        padding-left: 1rem;
+                        padding-righ: 1rem;
+                    }
+                }
+                > h1 {
+                    @include text-head($gray-900, 20px, 600)
+                }
+                .box-data-text {
+                    h2 {
+                        @include text-head($neutral-2, 1rem, 600)
+                    }
+                    h3 {
+                        @include text-head($gray-900, 1rem, 700)
+                    }
+                }
+            }
+        }
+    }
+}

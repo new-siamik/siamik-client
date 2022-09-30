@@ -1,0 +1,164 @@
+@import "../../base/_variable.scss";
+
+.dashboard-component {
+    #container_dashboard {
+        .content-wrapper {
+            display: flex;
+            .navout-up-dash {
+                @media only screen and (max-width: 320px) {
+                    gap: 1rem;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+            .left-content {
+                padding-left: 1.15rem;
+                padding-right: 1.15rem;
+                background: rgb(44,76,55);
+                background: linear-gradient(90deg, rgba(44,76,55,1) 0%, rgba(39,68,49,1) 50%, rgba(33,56,41,1) 100%);
+
+                @media only screen and (max-width: 768px) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .first-left {
+                    .logo-wrapper {
+                        padding-top: 1.5rem;
+                        .text-logo{
+                            > h1 {
+                                text-align: center;
+                                letter-spacing: 3px;
+                                @include text-head($neutral-4, 24px, 700);
+                            }
+                            > h2 {
+                                text-align: center;
+                                letter-spacing: 1px;
+                                @include text-head($neutral-4, 12px, 500);
+                            }
+                        }
+                    }
+                }
+                .second-left {
+                    .nav-dashboard {
+                        details {
+                            &[open] {
+                                z-index: 1;
+                                summary {
+                                    &::-webkit-details-marker {
+                                        display: none;
+                                    }
+
+                                    &:before {
+                                        top: 0;
+                                        left: 0;
+                                        content: '';
+                                        width: 100vw;
+                                        height: 100vh;
+                                        display: block;
+                                        position: fixed;
+                                        background: transparent;
+                                    }
+                                    &:after {
+                                        transform: rotate(-45deg) translate(0%, 0%);
+                                    }
+                                }
+                            }
+                            summary {
+                                padding: 1rem;
+                                cursor: pointer;
+                                list-style: none;
+                                @include flex-center;
+                                justify-content: space-between;
+                                background-color: $indigo-two-code;
+                                border-bottom: 1px solid $green-base;
+
+                                &:after {
+                                    content: '';
+                                    width: .5rem;
+                                    height: .5rem;
+                                    display: inline-block;
+                                    border-bottom-left-radius: 2px;
+                                    transform-origin: center center;
+                                    border-left: 1px solid currentColor;
+                                    border-bottom: 1px solid currentColor;
+                                    transition: transform ease-in-out 100ms;
+                                    transform: rotate(45deg) translate(50%, 0%);
+                                }
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                            > ul {
+                                left: 0;
+                                margin: 0;
+                                width: 100%;
+                                height: 90vh;
+                                overflow-y: scroll;
+                                position: absolute;
+                                box-sizing: border-box;
+                                top: calc(100% + .5rem);
+                                border-radius: 0 0 5px 5px;
+                                padding: 1.25rem 0 1rem 1rem;
+                                background: $indigo-two-code;
+                                > li {
+                                    > a {
+                                        display: block;
+                                        padding: 1rem 0;
+                                        border-bottom: 1px solid #ccc;
+                                        &.active-visit {
+                                            border-bottom: 0px;
+                                            padding-left: 1rem;
+                                            border-top-left-radius: 2rem;
+                                            border-bottom-left-radius: 2rem;
+                                            @include active-visit($gray-100, $green-base, 500);
+                                        }    
+                                    }
+                                    margin: 0;
+                                    &:first-child {
+                                        padding-top: 0;
+                                    }
+                                    &:last-child {
+                                        padding-bottom: 0;
+                                        border-bottom: none;
+                                    }
+                                }
+                            }
+                        }
+                        ul {
+                            .nav-item-dashboard {
+                                @include text-head($neutral-4, 1rem, 400);
+                                > a {
+                                    @include transition(all, .2s);
+                                    &.active-visit {
+                                        text-underline-offset: 4px;
+                                        text-decoration: underline;
+                                        text-decoration-style: solid;
+                                        -moz-text-decoration-style: solid;
+                                        text-decoration-color: $neutral-4;
+                                        -moz-text-decoration-color: $neutral-4;
+                                        &:hover {
+                                            text-decoration-color: $yellow-base;
+                                            -moz-text-decoration-color: $yellow-base;
+                                        }
+                                    }    
+                                    &:hover {
+                                        @media only screen and (min-width: 640px) {
+                                            @include active-visit($neutral-4, $neutral-3, 400);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .right-content {
+                .nav-up-dash {
+                    @media only screen and (max-width: 375px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

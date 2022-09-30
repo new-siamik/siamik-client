@@ -15,9 +15,9 @@ import DosenSignin from "./pages/dosen/auth/DosenSignin"
 // import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
 
 /* Student */
-/* import Mydash from "./pages/dashboard/Mydash";
-import Profile from "./pages/dashboard/Profile";
- */
+import Mydash from "./pages/student/Mydash";
+// import Profile from "./pages/dashboard/Profile";
+
 import ResetPass from "./pages/auth/ResetPass";
 import ForgotPass from "./pages/auth/ForgotPass";
 
@@ -68,8 +68,10 @@ export default function App() {
           <Route path="/reset-password" element={<ResetPass />} />
           
           {/* Student */}
-          {/* <Route path="/dashboard/my" element={<Mydash />} />
-          <Route path="/dashboard/profile" element={<Profile />} />
+          <Route path="/dashboard/my" element={<Mydash />} />
+          {/* <Route path="/dashboard/profile" element={<Profile />} />
+          <Route path="/dashboard/questions" element={<Questions />} />
+          <Route path="/question/create" element={<Question />} />
           <Route path="/question/:id" element={<Forum />} /> */}
 
           {/* Admin */}
@@ -82,6 +84,7 @@ export default function App() {
 
           <Route path="/" element={<Home />} />
           <Route path="/" element={<Pengumuman />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ScrollPage>

@@ -205,11 +205,19 @@ export default function Navbar() {
                                     </li>                                    
                                 </React.Fragment>
                         }
+                        <li className="btn-signin-mobile">
+                            <BtnCustom classname={`button-signin bg-white focus:outline-none hover:bg-yellow-base ui-open:bg-yellow-base  ui-open:ring-2 ui-open:ring-neutral-200 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]`}>
+                                <NavLink to="/signin">
+                                    Masuk
+                                </NavLink>
+                            </BtnCustom>
+                        </li>
                         <li>
                             <FormCard 
+                                classParent = {`form-card`}
                                 classButton = {`button-login bg-white focus:outline-none hover:bg-yellow-base ui-open:bg-yellow-base  ui-open:ring-2 ui-open:ring-neutral-200 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]`}
                                 classOverlay = {`fixed inset-0 bg-neutral-900 opacity-40`}
-                                classPanel = {`form-group fixed top-6 right-0 z-10 flex items-center justify-center overflow-y-auto overflow-x-hidden w-full h-full invisible`}
+                                classPanel = {`form-group fixed top-1 right-0 z-10 flex items-center justify-center overflow-y-auto overflow-x-hidden w-full h-full invisible`}
                             >
                                 <div className="visible relative z-20">
                                     <CardPrimary>

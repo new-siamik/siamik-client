@@ -35,8 +35,8 @@ $gray-900: #111827;
     transition: $property $duration ease-in-out;
 }
 
-@mixin active-visit($color: transparent, $bg: transparent) {
+@mixin active-visit($color, $bg, $fw) {
     color: $color;
-    font-weight: 500;
+    font-weight: $fw;
     background-color: $bg;
 }

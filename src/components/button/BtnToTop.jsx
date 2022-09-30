@@ -15,7 +15,7 @@ export default function BtnTopTop() {
     return (
 
         <ChevronUpIcon id="button_scroll_top" className = {
-                classes(buttontotop ? 'right-8': "-right-20", 'sm:w-10 w-[1.75rem] text-yellow-600 hover:bg-yellow-600 sm:hover:text-neutral-200 hover:p-1 hover:rounded-full fixed bottom-4 cursor-pointer')
+                classes(buttontotop ? 'right-8': "-right-20", 'sm:w-10 w-[1.75rem] text-yellow-600 hover:bg-yellow-600 hover:text-neutral-200 hover:p-1 hover:rounded-full fixed bottom-4 cursor-pointer')
              }
             onClick = {() => {
                 window.scroll({

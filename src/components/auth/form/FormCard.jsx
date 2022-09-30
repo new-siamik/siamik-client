@@ -3,10 +3,10 @@ import { Popover, Transition } from '@headlessui/react'
 
 export default function FormCard(props) {
 
-    const { classButton, classOverlay, classPanel, children} = props;
+    const { classParent, classButton, classOverlay, classPanel, children} = props;
 
     return (
-        <Popover as="div">
+        <Popover as="div" className={classParent}>
         <Popover.Button className = {classButton}>
                 Masuk
         </Popover.Button>

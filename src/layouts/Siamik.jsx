@@ -1,11 +1,19 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BtnToTop from "../components/button/BtnToTop";
 
 export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDesc, twitTitle, children}) {
+
+    const url = useLocation()
+    function getComponent(cmp) {
+        let dsb = "dashboard"
+        if(url.pathname === `/${dsb}/my`) return
+        return cmp
+    }
 
     return (
         <React.Fragment>
@@ -27,9 +35,9 @@ export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDes
 
             </Helmet>
             
-            <Navbar />
+            {getComponent(<Navbar/>)}
             {children}
-            <Footer />
+            {getComponent(<Footer/>)}
 
             <BtnToTop />
 
@@ -38,7 +46,7 @@ export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDes
 }
 
 Siamik.defaultProps = {
-    title: 'SIAMIK - Sistem Informasi Akademik UPN "Veteran" Jawa Timur',
+    title: 'SIAMIK — Sistem Informasi Akademik UPN "Veteran" Jawa Timur',
     key: 'siamik, new siamik, siamik upn jatim, siamik upn veteran jatim, sistem informasi akademik upn "veteran" jatim',
     desc: 'SIAMIK (Sistem Informasi Akademik) 2022 - Adalah suatu sistem informasi utk mengelola KRS, MBKM, Presensi, KHS, Transkrip dalam penyelengaraan pendidikan di lingkungan UPN "Veteran" Jatim.',
     ogUrl: null,
