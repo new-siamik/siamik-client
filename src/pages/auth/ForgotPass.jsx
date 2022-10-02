@@ -60,7 +60,7 @@ export default function ForgotPass() {
     
     return (
         <Siamik
-        title="Lupa Password - Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
+        title="Lupa Password | Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
         kw="lupa password siamik, lupa password new siamik,lupa password  siamik upn jatim, lupa password siamik upn veteran jatim, lupa password sistem informasi akademik upn 'veteran' jatim"
         desc="Fitur Lupa Password yang memudahkan mahasiswa untuk mengganti kata sandi yang lama dengan kata sandi yang baru"
         ogUrl={""}

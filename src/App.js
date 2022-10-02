@@ -18,6 +18,7 @@ import DosenSignin from "./pages/dosen/auth/DosenSignin"
 import Mydash from "./pages/student/Mydash";
 // import Profile from "./pages/dashboard/Profile";
 
+import Signin from "./pages/auth/Signin";
 import ResetPass from "./pages/auth/ResetPass";
 import ForgotPass from "./pages/auth/ForgotPass";
 
@@ -64,8 +65,9 @@ export default function App() {
     <AuthContext.Provider value={{ state, dispatch }}>
       <ScrollPage>
         <Routes>
-          <Route path="/forgot-password" element={<ForgotPass />} />
+          <Route path="/signin" element={<Signin />}></Route>
           <Route path="/reset-password" element={<ResetPass />} />
+          <Route path="/forgot-password" element={<ForgotPass />} />
           
           {/* Student */}
           <Route path="/dashboard/my" element={<Mydash />} />

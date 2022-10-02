@@ -2,8 +2,8 @@ import React from "react"
 // import Swal from "sweetalert2"
 // import axios from "../api/axios";
 // import AuthBtn from "./auth/AuthBtn";
-import { NavLink, useLocation } from 'react-router-dom';
 import { UserIcon } from '@heroicons/react/24/solid'
+import { NavLink, useLocation } from 'react-router-dom';
 
 import "../styles/component/_navbar.scss";
 
@@ -119,7 +119,7 @@ export default function Navbar() {
             })            
         }
 
-        if(locPath.pathname === "/forgot-password") return
+        if(locPath.pathname === "/forgot-password" || locPath.pathname === "/reset-password" || locPath.pathname === "/signin") return
         return navActive()
 
         // eslint-disable-next-line
@@ -147,9 +147,9 @@ export default function Navbar() {
                 </div>
 
                 <div id="nav_links">
-                    <ul id="nav_links_item" className="inter">
+                    <ul id="nav_links_item" className="inter space-x-9">
                         {
-                            validatePath("/forgot-password") ||  validatePath("/reset-password") ? 
+                            validatePath("/forgot-password") ||  validatePath("/reset-password") || validatePath("/signin") ? 
                                 <li>
                                     <BtnCustom classname="button-beranda bg-white focus:outline-none hover:bg-yellow-base text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]">
                                         <NavLink to="/">
@@ -212,64 +212,69 @@ export default function Navbar() {
                                 </NavLink>
                             </BtnCustom>
                         </li>
-                        <li>
-                            <FormCard 
-                                classParent = {`form-card`}
-                                classButton = {`button-login bg-white focus:outline-none hover:bg-yellow-base ui-open:bg-yellow-base  ui-open:ring-2 ui-open:ring-neutral-200 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]`}
-                                classOverlay = {`fixed inset-0 bg-neutral-900 opacity-40`}
-                                classPanel = {`form-group fixed top-1 right-0 z-10 flex items-center justify-center overflow-y-auto overflow-x-hidden w-full h-full invisible`}
-                            >
-                                <div className="visible relative z-20">
-                                    <CardPrimary>
-                                        <form method="POST"
-                                            className="relative bg-white p-10 w-[620px] h-[500px] rounded-b-[8px] overflow-y-scroll"
-                                            onSubmit={handleSubmit}
-                                            encType="multipart/form-data"
-                                        >
-                                            <div id="form-content">
-                                                <div className="flex justify-center img-form mb-5">
-                                                    <img src="/assets/image/login.svg" width={82} height={82} alt="Icon Login" />
-                                                </div>
-                                                <h2 className="form-title inter text-[20px] font-bold text-neutral-900 hover:text-neutral-900 ">Masuk Ke SIAMIK</h2>
-                                                <div className="flex flex-col items-center justify-center mt-6 space-y-6">
-                                                    {inputs.map((input) => (
-                                                        input.name === "npm" ?
-                                                            <FormInput
-                                                                key={input.key}
-                                                                {...input}
-                                                                value={values[input.name]}
+                        {
+                            validatePath("/signin") ?
+                                false
+                            :
+                                <li>
+                                    <FormCard 
+                                        classParent = {`form-card`}
+                                        classButton = {`button-login bg-white focus:outline-none hover:bg-yellow-base ui-open:bg-yellow-base  ui-open:ring-2 ui-open:ring-neutral-200 text-gray-800 px-7 py-[0.65rem] shadow-md rounded-[5px]`}
+                                        classOverlay = {`fixed inset-0 bg-neutral-900 opacity-40`}
+                                        classPanel = {`form-group fixed top-1 right-0 z-10 flex items-center justify-center overflow-y-auto overflow-x-hidden w-full h-full invisible`}
+                                    >
+                                        <div className="visible relative z-20">
+                                            <CardPrimary>
+                                                <form method="POST"
+                                                    className="relative bg-white p-10 w-[620px] h-[500px] rounded-b-[8px] overflow-y-scroll"
+                                                    onSubmit={handleSubmit}
+                                                    encType="multipart/form-data"
+                                                >
+                                                    <div id="form-content">
+                                                        <div className="flex justify-center img-form mb-5">
+                                                            <img src="/assets/image/login.svg" width={82} height={82} alt="Icon Login" />
+                                                        </div>
+                                                        <h2 className="form-title inter text-[20px] font-bold text-neutral-900 hover:text-neutral-900 ">Masuk Ke SIAMIK</h2>
+                                                        <div className="flex flex-col items-center justify-center mt-6 space-y-6">
+                                                            {inputs.map((input) => (
+                                                                input.name === "npm" ?
+                                                                    <FormInput
+                                                                        key={input.key}
+                                                                        {...input}
+                                                                        value={values[input.name]}
+                                                                        onChange={onChange}
+                                                                    >
+                                                                        <UserIcon className="w-5 h-5 text-green-base" aria-hidden="true" />
+                                                                    </FormInput>
+                                                                : false
+                                                            ))}
+                                                            <PasswordField 
+                                                                id="password"
+                                                                name="password"
+                                                                required="required"
                                                                 onChange={onChange}
-                                                            >
-                                                                <UserIcon className="w-5 h-5 text-green-base" aria-hidden="true" />
-                                                            </FormInput>
-                                                        : false
-                                                    ))}
-                                                    <PasswordField 
-                                                        id="password"
-                                                        name="password"
-                                                        required="required"
-                                                        onChange={onChange}
-                                                        placeholder="Kata Sandi"
-                                                        pattern="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*_])[a-zA-Z0-9!@#$%^&*_]{8,25}$"
-                                                        errorMessage="Minimal 8-25 karakter. 1 huruf, 1 angka, dan 1 special character!"
-                                                    />
-                                                </div>
-                                                <div className="w-full inter text-right mt-6 font-semibold cursor-pointer text-green-base sm:hover:underline sm:hover:underline-offset-4">
-                                                    <h3>
-                                                        <NavLink to="/forgot-password">
-                                                            Lupa Kata Sandi ?
-                                                        </NavLink>
-                                                    </h3>
-                                                </div>
-                                                <BtnCustom type="submit" classname="btn-form-submit w-full btn-pengumuman inter mt-10 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
-                                                    Masuk
-                                                </BtnCustom>
-                                            </div> 
-                                        </form>
-                                    </CardPrimary>
-                                </div>                                            
-                            </FormCard>
-                        </li>
+                                                                placeholder="Kata Sandi"
+                                                                pattern="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*_])[a-zA-Z0-9!@#$%^&*_]{8,25}$"
+                                                                errorMessage="Minimal 8-25 karakter. 1 huruf, 1 angka, dan 1 special character!"
+                                                            />
+                                                        </div>
+                                                        <div className="w-full inter text-right mt-6 font-semibold cursor-pointer text-green-base sm:hover:underline sm:hover:underline-offset-4">
+                                                            <h3>
+                                                                <NavLink to="/forgot-password">
+                                                                    Lupa Kata Sandi ?
+                                                                </NavLink>
+                                                            </h3>
+                                                        </div>
+                                                        <BtnCustom type="submit" classname="btn-form-submit w-full btn-pengumuman inter mt-10 px-7 py-3 rounded-[5px] text-neutral-100 bg-green-base sm:hover:bg-green-base/80 focus:bg-green-base/80">
+                                                            Masuk
+                                                        </BtnCustom>
+                                                    </div> 
+                                                </form>
+                                            </CardPrimary>
+                                        </div>                                            
+                                    </FormCard>
+                                </li>
+                        }
 
                         {/* {
                             loading ?
