@@ -115,7 +115,7 @@ export default function Home() {
                             <h1>Layanan Lainnya</h1>
                         </section>
                         <section className="content-article">
-                            <div className="container lato grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
+                            <div className="container mx-auto lato grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
                                         <img src="/assets/image/ukt-icon.svg" alt="Icon UKT" width={80}/>    
@@ -242,7 +242,7 @@ export default function Home() {
                             <h1>Manual / Panduan</h1>
                         </section>
                         <section className="content-article">
-                            <div className="container inter">
+                            <div className="inter">
                                 <CardPrimary classname="flex w-full gap-x-16">
                                     <div id="manual-image" className="lg:block hidden">
                                         <img src="/assets/image/manual-illus.svg" alt="Gambar Manual/Panduan"/>
@@ -270,7 +270,7 @@ export default function Home() {
                             <h1>Alur</h1>
                         </section>
                         <section className="content-article">
-                            <div className="container inter">
+                            <div className="inter">
                                 <CardPrimary classname="flex w-full gap-x-16">
                                     <div id="alur-image" className="lg:block hidden">
                                         <img src="/assets/image/alur-illus.svg" alt="Gambar Alur"/>
@@ -294,7 +294,7 @@ export default function Home() {
                         </section>
                     </article>
                     <article id="versi_aplikasi" className="box-content sm:px-16 px-[1.5rem] space-y-7 my-24">
-                        <div className="container">
+                        <div>
                             <CardPrimary classname="p-7">
                                 <h3 className="inter font-medium text-[20px]">Versi Aplikasi</h3>
                                 <div id="versi-list" className="pt-4 lato">
