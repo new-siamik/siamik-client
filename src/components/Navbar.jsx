@@ -147,7 +147,7 @@ export default function Navbar() {
                 </div>
 
                 <div id="nav_links">
-                    <ul id="nav_links_item" className="inter space-x-9">
+                    <ul id="nav_links_item" className="inter">
                         {
                             validatePath("/forgot-password") ||  validatePath("/reset-password") || validatePath("/signin") ? 
                                 <li>
