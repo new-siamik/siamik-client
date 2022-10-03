@@ -242,7 +242,7 @@ export default function Home() {
                             <h1>Manual / Panduan</h1>
                         </section>
                         <section className="content-article">
-                            <div className="inter">
+                            <div className="container-panduan inter">
                                 <CardPrimary classname="flex w-full gap-x-16">
                                     <div id="manual-image" className="lg:block hidden">
                                         <img src="/assets/image/manual-illus.svg" alt="Gambar Manual/Panduan"/>
@@ -270,7 +270,7 @@ export default function Home() {
                             <h1>Alur</h1>
                         </section>
                         <section className="content-article">
-                            <div className="inter">
+                            <div className="container-alur inter">
                                 <CardPrimary classname="flex w-full gap-x-16">
                                     <div id="alur-image" className="lg:block hidden">
                                         <img src="/assets/image/alur-illus.svg" alt="Gambar Alur"/>
@@ -301,7 +301,7 @@ export default function Home() {
                                     <ul className="space-y-6">
                                         <li className="flex flex-col space-y-2">
                                             <span className="font-semibold">22 September 2022 </span>
-                                            <span>Sistem Informasi Akademik (SIAMIK) 2022 Versi 0.3.0 - <span className="italic">Student College Dashboard</span></span>
+                                            <span>Sistem Informasi Akademik (SIAMIK) 2022 Versi 0.3.1 - <span className="italic">Student College Dashboard</span></span>
                                         </li>
                                     </ul>
                                 </div>
