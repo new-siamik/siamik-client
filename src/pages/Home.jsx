@@ -301,7 +301,7 @@ export default function Home() {
                                     <ul className="space-y-6">
                                         <li className="flex flex-col space-y-2">
                                             <span className="font-semibold">22 September 2022 </span>
-                                            <span>Sistem Informasi Akademik (SIAMIK) 2022 Versi 0.0.2 - <span className="italic">Landing Page</span></span>
+                                            <span>Sistem Informasi Akademik (SIAMIK) 2022 Versi 0.3.0 - <span className="italic">Student College Dashboard</span></span>
                                         </li>
                                     </ul>
                                 </div>
