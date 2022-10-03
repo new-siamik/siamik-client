@@ -1508,6 +1508,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@kunukn/react-collapse@^2.2.9":
+  version "2.2.9"
+  resolved "https://registry.yarnpkg.com/@kunukn/react-collapse/-/react-collapse-2.2.9.tgz#89787666b25145d179b65c55fcd335af7fa8fb6d"
+  integrity sha512-MKauq6R4HAHS/nGei+na8EpyO4qluTcoDeYetUnT1ME7K+CqxRCAIB4a4xo+gkufg2CuLhORA+s6sNjqm0oHEA==
+
 "@leichtgewicht/ip-codec@^2.0.1":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"

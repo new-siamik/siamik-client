@@ -8,17 +8,17 @@ import Siamik from "../../layouts/Siamik";
 import NavDash from "../../pages/student/NavDash"
 
 
-export default function Dashboard({title, kw, desc, ogUrl, ogType, ogTitle, ogDesc, twitTitle, children}) {
+export default function Dashboard({title, kw, desc, ogUrl, ogType, ogTitle, ogDesc, twitTitle, page, children}) {
 
     /* if(!localStorage.id) {
         return <Navigate to="/signin" replace/>  
     } */
 
-    function getDate() {
-        let today = new Date()
+    // function getDate() {
+    //     let today = new Date()
 
-        return today.toDateString()
-    }
+    //     return today.toDateString()
+    // }
 
     return (
         <Siamik
@@ -42,7 +42,9 @@ export default function Dashboard({title, kw, desc, ogUrl, ogType, ogTitle, ogDe
                         <NavDash />
                         <div className="right-content w-full">
                             <nav className="md:flex hidden nav-up-dash inter font-semibold items-center justify-between px-4 py-5 w-full">
-                                <h1>{ getDate() }</h1>
+                                <h1>
+                                    {page}
+                                </h1>
                                 <h1>Aditya Rizqi Ardhana</h1>
                             </nav>
                             {children}

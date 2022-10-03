@@ -100,7 +100,7 @@
                                 border-radius: 0 0 5px 5px;
                                 padding: 1.25rem 0 1rem 1rem;
                                 background: $indigo-two-code;
-                                > li {
+                                li {
                                     > a {
                                         display: block;
                                         padding: 1rem 0;
@@ -127,6 +127,12 @@
                         ul {
                             .nav-item-dashboard {
                                 @include text-head($neutral-4, 1rem, 400);
+                                h3 {
+                                    &:hover {
+                                        color: $neutral-3;
+                                        @include transition(color, .2s);
+                                    }
+                                }
                                 > a {
                                     @include transition(all, .2s);
                                     &.active-visit {

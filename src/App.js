@@ -16,7 +16,8 @@ import DosenSignin from "./pages/dosen/auth/DosenSignin"
 
 /* Student */
 import Mydash from "./pages/student/Mydash";
-// import Profile from "./pages/dashboard/Profile";
+import MyRegist from "./pages/student/MyRegist";
+// import Profile from "./pages/dashboard/Profile"; 
 
 import Signin from "./pages/auth/Signin";
 import ResetPass from "./pages/auth/ResetPass";
@@ -71,6 +72,7 @@ export default function App() {
           
           {/* Student */}
           <Route path="/dashboard/my" element={<Mydash />} />
+          <Route path="/dashboard/ukt/bukti-registrasi" element={<MyRegist />} />
           {/* <Route path="/dashboard/profile" element={<Profile />} />
           <Route path="/dashboard/questions" element={<Questions />} />
           <Route path="/question/create" element={<Question />} />

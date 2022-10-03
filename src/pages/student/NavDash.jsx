@@ -1,8 +1,10 @@
 import React from "react"
+import Collapse from "@kunukn/react-collapse";
 /* import useSWR from 'swr'
 import Swal from "sweetalert2"
 import axios from "../../api/axios";
  */import { NavLink } from "react-router-dom"
+import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 // import { Dots } from 'loading-animations-react';
 
 export default function NavDash() {
@@ -16,7 +18,19 @@ export default function NavDash() {
         {
             id: 2,
             name: "Status UKT",
-            link: "/dashboard/ukt",
+            link: true,
+            child: [
+                {
+                    id: 2.1,
+                    name: "Bukti Registrasi",
+                    link: "/dashboard/ukt/bukti-registrasi",
+                },
+                {
+                    id: 2.2,
+                    name: "Info Bayar UKT",
+                    link: "/dashboard/ukt/pembayaran",
+                }
+            ]
         },
         {
             id: 3,
@@ -54,7 +68,13 @@ export default function NavDash() {
             link: "/dashboard/skripsi",
         },
     ]
+
+    const [isOpen, setIsOpen] = React.useState(false);
     const [active, setActive] = React.useState(options[0].name);
+
+    const onInit = ({ state, style, node }) => {
+        setIsOpen(true);
+      };
 
     const handleClick = (e) => {
         setActive(e.target.innerText);
@@ -93,15 +113,17 @@ export default function NavDash() {
                         </summary>
                         <ul>
                             {
-                                options.map(option => (
-                                    <li key={option.id}>
-                                        <NavLink to={option.link} onClick={handleClick}
-                                                className={({ isActive }) =>
-                                                    isActive ? 'active-visit' : ''
-                                                }
-                                        >{option.name}</NavLink>
-                                    </li>
-                                ))
+                                options.map(option => {
+                                    return (
+                                        <li key={option.id}>
+                                            <NavLink to={option.link} onClick={handleClick}
+                                                    className={({ isActive }) =>
+                                                        isActive ? 'active-visit' : ''
+                                                    }
+                                            >{option.name}</NavLink>
+                                        </li>
+                                    )
+                                })
                             }
                             <li>
                                 <NavLink to="/change-password" onClick={handleClick}
@@ -122,14 +144,48 @@ export default function NavDash() {
                     <ul className="space-y-5 md:block hidden overflow-y-auto">
                         {
                             options.map(option => (
-                                <li key={option.id} className="nav-item-dashboard inter">
-                                    <NavLink to={option.link} className={({isActive}) =>
-                                            isActive ? "active-visit" : ""
+                                option.hasOwnProperty('child') ?
+                                <React.Fragment key={2}>
+                                    <li className="nav-item-dashboard inter flex items-center justify-between cursor-pointer" onClick={() => {
+                                        setIsOpen(state => !state)
+                                    }}>
+                                        <h3>
+                                            { option.name }
+                                        </h3>
+                                        {
+                                            isOpen ?
+                                                <ChevronRightIcon className="w-5 h-5 text-neutral-100" aria-hidden="true" />
+                                            :
+                                                <ChevronDownIcon className="w-5 h-5 text-neutral-100" aria-hidden="true" />
                                         }
-                                    >
-                                        <h3>{option.name}</h3>
-                                    </NavLink>
-                                </li>
+                                    </li>
+                                    <Collapse isOpen={!isOpen} onInit={onInit} style={{margin: 0}} elementType="div" className={`collapse-css-transition`}>
+                                            {
+                                                option.child.map( itemChild => (
+                                                    <li key={itemChild.id} className="nav-item-dashboard pt-6 pl-4 inter">
+                                                        <NavLink to={itemChild.link} onClick={handleClick}
+                                                                className={({ isActive }) =>
+                                                                    isActive ? 'active-visit' : ''
+                                                                }
+                                                        >
+                                                            <h3>
+                                                                {itemChild.name}
+                                                            </h3>
+                                                        </NavLink>
+                                                    </li>
+                                                ))
+                                            }
+                                    </Collapse>
+                                </React.Fragment>
+                                :
+                                    <li key={option.id} className="nav-item-dashboard inter">
+                                        <NavLink to={option.link} className={({isActive}) =>
+                                                isActive ? "active-visit" : ""
+                                            }
+                                        >
+                                            <h3>{option.name}</h3>
+                                        </NavLink>
+                                    </li>
                             ))
                         }   
                         <li className="nav-item-dashboard inter border-t border-dashed pt-5">

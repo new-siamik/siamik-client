@@ -1,0 +1,32 @@
+@import "../../base/_variable.scss";
+
+.myregist-component {
+    #container_myregist {
+        #card_regist {
+            .card-content {
+                #regist_information {
+                    h2 {
+                        @include text-head($gray-900, 1rem, 700);
+                        &:last-child {
+                            @include text-head($gray-900, 1rem, 500);
+                        }
+                    }
+                    h1 {
+                        margin: 5rem auto;
+                        text-align: center;
+                        @include text-head($gray-900, 36px, 500);
+                    }
+                }
+                #regist_signature {
+                    .signature-content {
+                        > h2 {
+                            &:first-child {
+                                @include text-head($gray-900, 1rem, 600)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

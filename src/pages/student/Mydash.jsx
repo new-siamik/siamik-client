@@ -22,7 +22,8 @@ export default function Mydash() {
             ogType=""
             ogTitle=""
             ogDesc=""
-            twitTitle=""                
+            twitTitle=""  
+            page="Beranda"              
         >
             <div className="mydash-component">
                 <div id="container_mydash">
