@@ -2,6 +2,9 @@
 
 .mydash-component {
     #container_mydash {
+        h2, h3 {
+            line-height: 1.75rem;
+        }
         #headline_msg {
             .text-headline {
                 > h1 {

@@ -3,8 +3,9 @@ import React from "react";
 import axios from "../../api/axios";
 import { Dots } from 'loading-animations-react';
  */
-import Dashboard from "./Dashboard";
 import "../../styles/student/dashboard/_myregist.scss";
+
+import Dashboard from "./Dashboard";
 
 export default function MyRegist() {
     
@@ -28,17 +29,17 @@ export default function MyRegist() {
                 <div id="container_myregist">
                     <article id="card_regist" className="bg-gray-50/75 p-4">
                         <div className="card-content shadow-md bg-white p-5 space-y-9">
-                            <div id="content_identitas" className="space-y-4">
-                                <h2>NIM    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 19081010178</h2>
-                                <h2>Nama   &nbsp;&nbsp;&nbsp;: Aditya Rizqi Ardhana</h2>
-                                <h2>Alamat &nbsp;: Jln. Randu Barat 1-A / 10, Sidotopo Wetan, Kenjeran, Surabaya, Jawa Timur</h2>
+                            <div id="content_identitas" className="space-y-4 lato leading-7">
+                                <h2><strong>NIM</strong>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 19081010178</h2>
+                                <h2><strong>Nama</strong>   &nbsp;&nbsp;&nbsp;: Aditya Rizqi Ardhana</h2>
+                                <h2><strong>Alamat</strong> &nbsp;: Jln. Randu Barat 1-A / 10, Sidotopo Wetan, Kenjeran, Surabaya, Jawa Timur</h2>
                             </div>
                             <div id="regist_information" className="lato">
                                 <h2>Kode Registrasi</h2>
                                 <h1>GANJIL 22/223 87 21700 ~ 8/4/2022</h1>
                                 <h2>SURABAYA, 9/2/2022 7:36:59 PM</h2>
                             </div>
-                            <div id="regist_signature" className="flex flex-wrap gap-8 justify-between lato">
+                            <div id="regist_signature" className="flex flex-wrap gap-14 justify-between lato">
                                 <div id="kepala_biro_signature" className="signature-content space-y-20">
                                     <h2>Kepala Biro Akademik</h2>
                                     <div className="space-y-6">

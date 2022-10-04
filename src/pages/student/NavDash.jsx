@@ -29,8 +29,8 @@ export default function NavDash() {
                 },
                 {
                     id: 2.2,
-                    name: "Info Bayar UKT",
-                    link: "/dashboard/ukt/pembayaran",
+                    name: "Informasi Tagihan UKT",
+                    link: "/dashboard/ukt/tagihan",
                 }
             ]
         },

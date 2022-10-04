@@ -11,7 +11,7 @@ export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDes
     const url = useLocation()
     function getComponent(cmp) {
         let dsb = "dashboard"
-        if(url.pathname === `/${dsb}/my` || url.pathname === `/${dsb}/ukt/bukti-registrasi` || url.pathname === `/${dsb}/ukt/pembayaran`) return
+        if(url.pathname === `/${dsb}/my` || url.pathname === `/${dsb}/ukt/bukti-registrasi` || url.pathname === `/${dsb}/ukt/tagihan` || url.pathname === `/${dsb}/mbkm`) return
         return cmp
     }
 

@@ -3,8 +3,9 @@ import React from "react";
 import axios from "../../api/axios";
 import { Dots } from 'loading-animations-react';
  */
-import Dashboard from "./Dashboard";
 import "../../styles/student/dashboard/_mydash.scss";
+
+import Dashboard from "./Dashboard";
 import CardCustom from "../../components/card/CardCustom";
 
 export default function Mydash() {
@@ -61,7 +62,7 @@ export default function Mydash() {
                             <h1>Data Akademik</h1>
                             <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
                                 <CardCustom classname="p-7">
-                                    <div id="left_text" className="box-data-text space-y-5">
+                                    <div id="left_text" className="box-data-text space-y-6">
                                         <div className="space-y-2">
                                             <h2>Dosen Wali</h2>
                                             <h3>Fetty Tri Anggraeny, S.Kom., M.Kom</h3>
@@ -81,7 +82,7 @@ export default function Mydash() {
                                     </div>
                                 </CardCustom>
                                 <CardCustom classname="p-7">
-                                    <div id="right_text" className="box-data-text space-y-5">
+                                    <div id="right_text" className="box-data-text space-y-6">
                                         <div className="space-y-2">
                                             <h2>Fakultas</h2>
                                             <h3>Ilmu Komputer</h3>
@@ -106,7 +107,7 @@ export default function Mydash() {
                             <h1>Data Kontak Mahasiswa</h1>
                             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
                                 <CardCustom classname="p-7">
-                                    <div id="left_text" className="box-data-text space-y-5">
+                                    <div id="left_text" className="box-data-text space-y-6">
                                         <div className="space-y-2">
                                             <h2>No. HP Mahasiswa</h2>
                                             <h3>081243762888</h3>
@@ -122,7 +123,7 @@ export default function Mydash() {
                                     </div>
                                 </CardCustom>
                                 <CardCustom classname="p-7">
-                                    <div id="center_text" className="box-data-text gap-6">
+                                    <div id="center_text" className="box-data-text gap-6 space-y-6">
                                         <div className="space-y-2">
                                             <h2>Jenis Mahasiswa</h2>
                                             <h3>SNMPTN</h3>
@@ -138,7 +139,7 @@ export default function Mydash() {
                                     </div>
                                 </CardCustom>
                                 <CardCustom classname="p-7">
-                                    <div id="center_text" className="box-data-text space-y-5">
+                                    <div id="center_text" className="box-data-text space-y-6">
                                         <div className="space-y-2">
                                             <h2>Nama Orang Tua</h2>
                                             <h3>Lorem Ipsum</h3>

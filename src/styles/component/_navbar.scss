@@ -129,6 +129,7 @@ header {
           display: flex;
           align-items: center;
           @media only screen and (max-width: 919px) {
+            gap: 1rem;
             padding-top: 3rem;
             flex-direction: column;
             @include transition(all, .3s);

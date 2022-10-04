@@ -1,0 +1,35 @@
+@import "../../base/_variable.scss";
+
+.mbkm-component {
+    #container_mbkm {
+        #container_mbkm {
+            .card-custom {
+                @media only screen and (max-width: 411px) {
+                    padding: 0.75rem;
+                }
+                .card-content-mbkm {
+                    > h1 {
+                        @include text-head($gray-900, 24px, 600)
+                    }
+                    > p{
+                        @media only screen and (min-width: 640px) {
+                            text-indent: 3.2rem;
+                        }
+                        > span {
+                            font-weight: 600;
+                            text-decoration: underline;
+                            text-underline-offset: 2px;
+                        }
+                    }
+                    .link-mbkm {
+                        &:hover {
+                            text-decoration: underline;
+                            text-underline-offset: 3px;
+                            text-decoration-color: $green-base;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

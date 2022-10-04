@@ -15,7 +15,9 @@ import DosenSignin from "./pages/dosen/auth/DosenSignin"
 // import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
 
 /* Student */
+import Mbkm from "./pages/student/Mbkm.jsx";
 import Mydash from "./pages/student/Mydash";
+import MyUkt from "./pages/student/MyUkt.jsx";
 import MyRegist from "./pages/student/MyRegist";
 // import Profile from "./pages/dashboard/Profile"; 
 
@@ -72,6 +74,8 @@ export default function App() {
           
           {/* Student */}
           <Route path="/dashboard/my" element={<Mydash />} />
+          <Route path="/dashboard/mbkm" element={<Mbkm />} />
+          <Route path="/dashboard/ukt/tagihan" element={<MyUkt />} />
           <Route path="/dashboard/ukt/bukti-registrasi" element={<MyRegist />} />
           {/* <Route path="/dashboard/profile" element={<Profile />} />
           <Route path="/dashboard/questions" element={<Questions />} />

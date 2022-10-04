@@ -1,0 +1,31 @@
+@import "../../base/_variable.scss";
+
+.myukt-component {
+    #container_myukt {
+        #card_ukt {
+            .card-custom {
+                @media only screen and (max-width: 411px) {
+                    padding: 0.75rem;
+                }
+                #title_card {
+                    > h2 {
+                        word-spacing: 0.25rem;
+                        &:first-child {
+                            @include text-head($gray-900, 1.25rem, 600)
+                        }
+                        &:last-child {
+                            @include text-head($gray-900, 1.15rem, 500)
+                        }
+                    }
+                    table {
+                        th, td {
+                            &:not(:last-child){
+                                border-right: 1px solid $neutral-3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
