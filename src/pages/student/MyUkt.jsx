@@ -16,9 +16,9 @@ export default function MyUkt() {
  */
     return (
         <Dashboard
-            title="Informasi Bayar UKT | SIAMIK UPN 'Veteran' Jatim"
-            kw="informasi bayar ukt siamik"
-            desc="Informasi Bayar UKT Siamik UPN 'Veteran' Jawa Timur"
+            title="Informasi Tagihan UKT | SIAMIK UPN 'Veteran' Jatim"
+            kw="informasi tagihan ukt siamik"
+            desc="Informasi Tagihan UKT Siamik UPN 'Veteran' Jawa Timur"
             ogUrl=""
             ogType=""
             ogTitle=""
@@ -33,9 +33,9 @@ export default function MyUkt() {
                             <div id="title_card" className="lato space-y-5">
                                 <h2>Informasi Tagihan Pembayaran UKT</h2>
                                 <h2>Tanggal : Sabtu, September 3 2022</h2>
-                                <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
-                                    <table className="w-full border-collapse text-gray-900">
-                                        <thead className="text-xs text-neutral-100 uppercase bg-green-base text-center">
+                                <div className="overflow-x-auto shadow-md sm:rounded-lg">
+                                    <table className="w-full text-gray-900">
+                                        <thead className="text-neutral-100 uppercase bg-green-base text-center">
                                             <tr>
                                                 <th scope="col" className="py-3 px-6 text-[1rem] lato">
                                                     JP

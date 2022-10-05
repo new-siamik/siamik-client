@@ -3,12 +3,11 @@ import { NavLink } from "react-router-dom";
 /* import useSWR from 'swr'
 import axios from "../../api/axios";
 import { Dots } from 'loading-animations-react';
- */
+*/
 import "../../styles/student/dashboard/_mbkm.scss";
 
 import Dashboard from "./Dashboard";
 import CardCustom from "../../components/card/CardCustom"
-
 export default function Mbkm() {
     
 /*     const { data: user } = useSWR( `http://localhost:8080/api/user/id?id=${localStorage.id}`, async url => await axios.get(url, { withCredentials: true }).then( res => res.data.users))
@@ -64,7 +63,7 @@ export default function Mbkm() {
                                                 <NavLink className="link-mbkm" to="/dashboard/my">Harus Isi KRS di SIAMIK</NavLink>
                                             </li>
                                             <li>
-                                                <a className="link-mbkm" href="https://siamik.upnjatim.ac.id/html/siamik/mbkm/SURAT_PEMBERITAHUAN_MBKM_GENAP_2022_MHS.pdf">Alur MBKM 42 PTN</a>
+                                                <a href="https://siamik.upnjatim.ac.id/html/siamik/mbkm/SURAT_PEMBERITAHUAN_MBKM_GENAP_2022_MHS.pdf" target="__blank" rel="nooopener noreferrer">Alur MBKM 42 PTN</a>
                                             </li>
                                         </ul>
                                     </li>
