@@ -136,13 +136,13 @@
                         ul {
                             .nav-item-dashboard {
                                 @include text-head($neutral-4, 1rem, 400);
-                                h3 {
-                                    &:hover {
-                                        color: $neutral-3;
-                                        @include transition(color, .2s);
-                                    }
-                                }
                                 > a {
+                                    h3 {
+                                        &:hover {
+                                            color: $neutral-3;
+                                            @include transition(color, .2s);
+                                        }
+                                    }
                                     @include transition(all, .2s);
                                     &.active-visit {
                                         text-underline-offset: 4px;

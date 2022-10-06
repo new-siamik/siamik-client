@@ -15,8 +15,10 @@ import DosenSignin from "./pages/dosen/auth/DosenSignin"
 // import AdminCreateMentor from "./pages/admin/dashboard/AdminCreateMentor"
 
 /* Student */
-import Mbkm from "./pages/student/Mbkm.jsx";
+import Kkn from "./pages/student/Kkn.jsx";
+import Khs from "./pages/student/Khs.jsx";
 import Mydash from "./pages/student/Mydash";
+import Mbkm from "./pages/student/Mbkm.jsx";
 import MyUkt from "./pages/student/MyUkt.jsx";
 import MyRegist from "./pages/student/MyRegist";
 // import Profile from "./pages/dashboard/Profile"; 
@@ -73,6 +75,8 @@ export default function App() {
           <Route path="/forgot-password" element={<ForgotPass />} />
           
           {/* Student */}
+          <Route path="/dashboard/kkn" element={<Kkn />} />
+          <Route path="/dashboard/khs" element={<Khs />} />
           <Route path="/dashboard/my" element={<Mydash />} />
           <Route path="/dashboard/mbkm" element={<Mbkm />} />
           <Route path="/dashboard/ukt/tagihan" element={<MyUkt />} />

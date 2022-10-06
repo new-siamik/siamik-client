@@ -1,13 +1,13 @@
 @import "../../base/_variable.scss";
 
-.mbkm-component {
-    #container_mbkm {
-        #container_article_mbkm {
+.khs-component {
+    #container_khs {
+        #container_article_khs {
             .card-custom {
                 @media only screen and (max-width: 411px) {
                     padding: 0.75rem;
                 }
-                .card-content-mbkm {
+                .card-content-khs {
                     > h1 {
                         @include text-head($gray-900, 24px, 600)
                     }
@@ -21,11 +21,21 @@
                             text-underline-offset: 2px;
                         }
                     }
-                    .link-mbkm {
+                    .link-khs {
                         &:hover {
                             text-decoration: underline;
                             text-underline-offset: 3px;
                             text-decoration-color: $green-base;
+                        }
+                    }
+                }
+                #card_table {
+                    table {
+                        th, td {
+                            &:not(:last-child){
+                                border-right: 1px solid $neutral-3;
+                                border-bottom: 1px solid $neutral-3;
+                            }
                         }
                     }
                 }

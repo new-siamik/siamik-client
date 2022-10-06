@@ -9,11 +9,11 @@ import "../../styles/student/dashboard/_mbkm.scss";
 import Dashboard from "./Dashboard";
 import CardCustom from "../../components/card/CardCustom"
 export default function Mbkm() {
-    
-/*     const { data: user } = useSWR( `http://localhost:8080/api/user/id?id=${localStorage.id}`, async url => await axios.get(url, { withCredentials: true }).then( res => res.data.users))
 
-    const { data: forumLength } = useSWR(`http://localhost:8080/api/forum/count/id?users_id=${localStorage.id}`, async url => await axios.get(url, { withCredentials: true }).then( res => res.data))
- */
+    /*     const { data: user } = useSWR( `http://localhost:8080/api/user/id?id=${localStorage.id}`, async url => await axios.get(url, { withCredentials: true }).then( res => res.data.users))
+    
+        const { data: forumLength } = useSWR(`http://localhost:8080/api/forum/count/id?users_id=${localStorage.id}`, async url => await axios.get(url, { withCredentials: true }).then( res => res.data))
+     */
     return (
         <Dashboard
             title="MBKM | SIAMIK UPN 'Veteran' Jatim"
@@ -23,12 +23,12 @@ export default function Mbkm() {
             ogType=""
             ogTitle=""
             ogDesc=""
-            twitTitle=""   
-            page="MBKM"             
+            twitTitle=""
+            page="MBKM"
         >
             <div className="mbkm-component">
                 <div id="container_mbkm">
-                    <article id="container_mbkm" className="bg-gray-50/75 p-4 space-y-10">
+                    <article id="container_article_mbkm" className="bg-gray-50/75 p-4 space-y-10">
                         <CardCustom classname="p-7">
                             <div id="content_identitas" className="space-y-4 lato leading-7">
                                 <h2><strong>NIM</strong>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 19081010178</h2>

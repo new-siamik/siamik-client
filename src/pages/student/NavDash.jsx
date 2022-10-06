@@ -149,7 +149,7 @@ export default function NavDash() {
                                             <Collapse isOpen={!isOpen} onInit={onInit} style={{margin: 0}} elementType="div" className={`collapse-css-transition`}>
                                                     {
                                                         option.child.map( itemChild => (
-                                                            <li key={itemChild.id} className="pt-6 pl-4 inter">
+                                                            <li key={itemChild.id} className="last:pt-0 pt-6 pl-4 inter">
                                                                 <NavLink to={itemChild.link} 
                                                                         className={({ isActive }) =>
                                                                             isActive ? 'active-visit child-item' : ''

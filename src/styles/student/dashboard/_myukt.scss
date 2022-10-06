@@ -17,6 +17,8 @@
                             @include text-head($gray-900, 1.15rem, 500)
                         }
                     }
+                }
+                #card_table {
                     table {
                         th, td {
                             &:not(:last-child){
