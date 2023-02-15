@@ -1,5 +1,4 @@
-@import "../../../base/variable";
-// @import "../../../component/button/";
+@use '../base/' as *;
 
 #nav_noauth_item {
     display: flex;

@@ -1,4 +1,4 @@
-@import "../styles/base/_variable.scss";
+@use '../styles/base/' as *;
 
 .home-component {
     #container_home {

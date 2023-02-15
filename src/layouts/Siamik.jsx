@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BtnToTop from "../components/button/BtnToTop";
 
-export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDesc, twitTitle, children}) {
+export default function Siamik({ title, kw, desc, ogUrl='', ogType='', ogTitle='', ogDesc='', twitTitle='', children}) {
 
     const url = useLocation()
     function getComponent(cmp) {
@@ -20,7 +20,7 @@ export default function Siamik({ title, key, desc, ogUrl, ogType, ogTitle, ogDes
             <Helmet>
                     <title>{title}</title>
 
-                    <meta name="keywords" content={key}/>
+                    <meta name="keywords" content={kw}/>
                     <meta name="description" content={desc}/>
                     <meta property="og:url" content={ogUrl}/>
                     <meta property="og:type" content={ogType}/>

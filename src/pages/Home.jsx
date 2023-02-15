@@ -6,10 +6,21 @@ import "../styles/_home.scss";
 import '@splidejs/react-splide/css';
 import '@splidejs/react-splide/css/core';
 
-import Siamik from "../layouts/Siamik";
-import BtnCustom from "../components/button/BtnCustom";
-import CardPrimary from "../components/card/CardPrimary";
+import Siamik from "@/layouts/Siamik";
+import BtnCustom from "@/components/button/BtnCustom";
+import CardPrimary from "@/components/card/CardPrimary";
 
+import alur from '@/assets/images/alur-illus.svg'
+import info from '@/assets/images/info-icon.svg'
+import uktIcon from '@/assets/images/ukt-icon.svg'
+import topScore from '@/assets/images/top-score.svg'
+import groupImage from '@/assets/images/group-image.svg'
+import manualPanduan from '@/assets/images/manual-illus.svg'
+import daftarPeserta from '@/assets/images/daftar-peserta-icon.svg'
+import calendarAcademic from '@/assets/images/calendar-academic.svg'
+import kampusMerdekaIcon from '@/assets/images/kampus-merdeka-icon.svg'
+import bimbinganKonseling from '@/assets/images/bimbingan-konseling-icon.svg'
+import wisudaTrackIjazah from '@/assets/images/wisuda-tracking-ijazah-icon.svg'
 
 export default function Home() {
     
@@ -19,17 +30,12 @@ export default function Home() {
             title="SIAMIK — Sistem Informasi Akademik UPN 'Veteran' Jawa Timur"
             kw="siamik, new siamik, siamik upn jatim, siamik upn veteran jatim, sistem informasi akademik upn 'veteran' jatim"
             desc="SIAMIK (Sistem Informasi Akademik) 2022 - Adalah suatu sistem informasi utk mengelola KRS, MBKM, Presensi, KHS, Transkrip dalam penyelengaraan pendidikan di lingkungan UPN 'Veteran' Jatim."
-            ogUrl={""}
-            ogType={""}
-            ogTitle={""}
-            ogDesc={""}
-            twitTitle={""}
         >
             <main className="home-component">
                 <div id="container_home">
-                    <article id="welcome_msg" className="bg-cover bg-no-repeat overflow-x-hidden text-center p-16 h-[555px]" style={{backgroundImage: `url(/assets/image/background-siamik.svg)`}}>
+                    <article id="welcome_msg" className="bg-cover bg-no-repeat overflow-x-hidden text-center p-16 h-[555px]" style={{backgroundImage: 'url(/assets/image/background-siamik.svg)'}}>
                         <section className="group-image mb-7">
-                            <img src="/assets/image/group-image.svg" width={202} height={58} alt="Group Logo" />
+                            <img src={groupImage} width={202} height={58} alt="Group Logo" />
                         </section>
                         <section className="text-msg lato space-y-2">
                             <h1>SELAMAT DATANG!</h1>
@@ -88,7 +94,7 @@ export default function Home() {
                         <section className="content-article">
                             <CardPrimary classname="box-pengumuman p-7">
                                 <div id="date_pengumuman" className="lato">
-                                    <img src="/assets/image/calendar-academic.svg" alt="Icon Calendar Academic" width={20}/>
+                                    <img src={calendarAcademic} alt="Icon Calendar Academic" width={20}/>
                                     <h3>31 Agustus 2022 | 16:26 WIB</h3>
                                 </div>
                                 <div id="content_pengumuman" className="lato">
@@ -118,7 +124,7 @@ export default function Home() {
                             <div className="container mx-auto lato grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
-                                        <img src="/assets/image/ukt-icon.svg" alt="Icon UKT" width={80}/>    
+                                        <img src={uktIcon} alt="Icon UKT" width={80}/>    
                                     </div>
                                     <div id="list-wisuda" className="flex flex-col gap-y-4 w-full">
                                         <BtnCustom classname="md:block hidden border-2 border-green-base rounded-[5px] text-left py-1 px-2 invisible">
@@ -136,7 +142,7 @@ export default function Home() {
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
-                                        <img src="/assets/image/calendar-academic.svg" alt="Icon UKT" width={80}/>    
+                                        <img src={calendarAcademic} alt="Calendar Academic" width={80}/>    
                                     </div>
                                     <div className="w-full">
                                         <a href="https://siamik.upnjatim.ac.id/html/siamik/umum/KALENDER_AKADEMIK-UPNVJT_2022_2023.pdf" download>
@@ -148,7 +154,7 @@ export default function Home() {
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
-                                        <img src="/assets/image/kampus-merdeka-icon.svg" alt="Icon UKT" width={80}/>    
+                                        <img src={kampusMerdekaIcon} alt="Icon Kampus Merdeka" width={80}/>    
                                     </div>
                                     <div className="w-full">
                                         <a href="https://siamik.upnjatim.ac.id/html/siamik/mbkm.asp" target="__blank" rel="noopener noreferrer">
@@ -160,7 +166,7 @@ export default function Home() {
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
-                                        <img src="/assets/image/daftar-peserta-icon.svg" alt="Icon UKT" width={80}/>    
+                                        <img src={daftarPeserta} alt="Icon Daftar Peserta" width={80}/>    
                                     </div>
                                     <div className="w-full">
                                         <a href="https://siamik.upnjatim.ac.id/html/siamik/daftarPesertaKuliah.asp" target="__blank" rel="noopener noreferrer">
@@ -172,7 +178,7 @@ export default function Home() {
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
-                                        <img src="/assets/image/top-score.svg" alt="Icon UKT" width={80}/>    
+                                        <img src={topScore} alt="Icon Top Score" width={80}/>    
                                     </div>
                                     <div className="w-full">
                                         <a href="https://siamik.upnjatim.ac.id/html/siamik/topScoreIPS.asp" target="__blank" rel="noopener noreferrer">
@@ -184,7 +190,7 @@ export default function Home() {
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
-                                        <img src="/assets/image/info-icon.svg" alt="Icon UKT" width={80}/>    
+                                        <img src={info} alt="Icon Informasi" width={80}/>    
                                     </div>
                                     <div id="list-info" className="flex flex-col gap-y-4 w-full">
                                         <a href="https://siamik.upnjatim.ac.id/html/siamik/infoPKL.asp" target="__blank" rel="noopener noreferrer">
@@ -206,7 +212,7 @@ export default function Home() {
                                 </CardPrimary> 
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
-                                        <img src="/assets/image/bimbingan-konseling-icon.svg" alt="Icon UKT" width={80}/>    
+                                        <img src={bimbinganKonseling} alt="Icon Bimbingan Konseling" width={80}/>    
                                     </div>
                                     <div className="w-full">
 
@@ -219,7 +225,7 @@ export default function Home() {
                                 </CardPrimary>
                                 <CardPrimary classname="box-other-service space-x-7">
                                     <div id="icon_service">
-                                        <img src="/assets/image/wisuda-tracking-ijazah-icon.svg" alt="Icon UKT" width={80}/>    
+                                        <img src={wisudaTrackIjazah} alt="Icon Wisuda dan Tracking Ijazah" width={80}/>    
                                     </div>
                                     <div id="list-wisuda" className="flex flex-col gap-y-4 w-full">
                                         <a href="https://siamik.upnjatim.ac.id/wisuda2017/index.asp" target="__blank" rel="noopener noreferrer">
@@ -245,7 +251,7 @@ export default function Home() {
                             <div className="container-panduan inter">
                                 <CardPrimary classname="flex w-full gap-x-16">
                                     <div id="manual-image" className="lg:block hidden">
-                                        <img src="/assets/image/manual-illus.svg" alt="Gambar Manual/Panduan"/>
+                                        <img src={manualPanduan} alt="Gambar Manual/Panduan"/>
                                     </div>
                                     <div id="manual-list" className="p-12 space-y-12">
                                         <div className="item-list item-1">
@@ -273,7 +279,7 @@ export default function Home() {
                             <div className="container-alur inter">
                                 <CardPrimary classname="flex w-full gap-x-16">
                                     <div id="alur-image" className="lg:block hidden">
-                                        <img src="/assets/image/alur-illus.svg" alt="Gambar Alur"/>
+                                        <img src={alur} alt="Gambar Alur"/>
                                     </div>
                                     <div id="alur-list" className="p-12 space-y-12">
                                         <div className="item-list item-1">

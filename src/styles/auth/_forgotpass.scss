@@ -1,4 +1,4 @@
-@import "../base/_variable.scss";
+@use '../base/' as *;
 
 .forgotpass-component {
     #container_forgotpass {

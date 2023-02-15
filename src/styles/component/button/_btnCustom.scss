@@ -1,4 +1,4 @@
-@import "../../base/variable";
+@use '../../base/' as *;
 
 @mixin btnCustom($tb: .5rem, $lr: 1.25rem, $radius: .25rem, $bg: $orange-code) {
     color: white;
